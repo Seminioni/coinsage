@@ -1,0 +1,41 @@
+{
+  "name": "Coins",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:TeachMePleaseCorp/coinsage.ru.git",
+  "author": "Seminioni <lebatmann@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "create:dist": "mkdirp dist || trash dist",
+    "remove:dist": "trash dist",
+    "copy:fonts": "cpx \"src/fonts/**/*.{woff,woff2,tff,otf}\" dist/fonts -w -C",
+    "icons": "svgo -q -f src/icons/svg && svg-sprite-generate -d src/icons/svg -o dist/sprite.svg",
+    "parcel:start": "parcel ./src/html/index.njk",
+    "parcel:build": "parcel build ./src/html/index.njk",
+    "start": "run-p create:dist copy:fonts icons parcel:start",
+    "build": "run-p remove:dist parcel:build"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "cssnano": "^3.10.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.2",
+    "nunjucks": "^3.0.1",
+    "parcel-bundler": "^1.3.1",
+    "parcel-plugin-nunjucks": "^1.0.0",
+    "postcss": "^6.0.14",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-font-magician": "^2.1.0",
+    "postcss-nesting": "^4.2.1",
+    "postcss-normalize": "^4.0.0",
+    "svg-sprite-generator": "^0.0.7",
+    "svgo": "^1.0.3",
+    "trash-cli": "^1.4.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions"
+  ]
+}

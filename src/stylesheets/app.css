@@ -1,0 +1,39 @@
+@import-normalize;
+
+:root {
+  --black: #000000;
+  --gold: #B49740;
+  --gray1: #F7F7F7;
+  --gray2: #87970E;
+  --red: #E7576B;
+  --green: #6AD67F;
+  --Lato: 'Lato';
+}
+
+a, b {
+  color: var(--red);
+
+  & c, & d {
+    color: black;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Lato';
+  font-weight: normal;
+}
+
+@media (width >= 500px) and (width <= 1200px) {
+ html {
+   background-color: var(--gray2);
+ }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
