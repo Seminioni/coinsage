@@ -1,63 +1,35 @@
 # Coinsage.ru frontend repository
 
-Frontend lives here
+### Подготовка
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+1. Установить [nvm](https://github.com/creationix/nvm)
 ```
-Give examples
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+```
+2. Установить lts-версию node.js
+```
+nvm install --lts
 ```
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+### Установка зависимостей
+В корне папки
 
 ```
-Give the example
+npm install || yarn
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+### Запуск дев-режима
 
 ```
-Give an example
+npm start || yarn start
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
+### Сбилдить проект
 
 ```
-Give an example
+npm build || yarn build
+
 ```
+## Бегает на
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Yarn](https://yarnpkg.com/en/) - Yarn — dependency manager. 
-* [Webpack](https://webpack.js.org/) - Webpack — new age bundler.
-* [Gulp.js](https://rometools.github.io/rome/) - Gulp.js — old good horse.
+* [Yarn](https://yarnpkg.com/en/) - Yarn — Fast, reliable, and secure dependency management.
+* [Parcel](https://en.parceljs.org/) - Parcel — Blazing fast, zero configuration web application bundler.
+* [PostCSS](https://rometools.github.io/rome/) - PostCSS — is a tool for transforming styles with JS plugins.
