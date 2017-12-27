@@ -30,6 +30,6 @@ npm build || yarn build
 ```
 ## Бегает на
 
-* [Yarn](https://yarnpkg.com/en/) - Yarn — Fast, reliable, and secure dependency management.
-* [Parcel](https://en.parceljs.org/) - Parcel — Blazing fast, zero configuration web application bundler.
-* [PostCSS](https://rometools.github.io/rome/) - PostCSS — is a tool for transforming styles with JS plugins.
+* [Yarn](https://yarnpkg.com/en/) — Fast, reliable, and secure dependency management.
+* [Parcel](https://en.parceljs.org/) — Blazing fast, zero configuration web application bundler.
+* [PostCSS](https://rometools.github.io/rome/) — is a tool for transforming styles with JS plugins.
