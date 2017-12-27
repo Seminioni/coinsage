@@ -28,6 +28,7 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-font-magician": "^2.1.0",
+    "postcss-image-set-polyfill": "^0.4.4",
     "postcss-nesting": "^4.2.1",
     "postcss-normalize": "^4.0.0",
     "svg-sprite-generator": "^0.0.7",

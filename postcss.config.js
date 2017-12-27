@@ -43,6 +43,7 @@ let plugins = [
    },
     formats: 'woff2 woff'
   }),
+  require('postcss-image-set-polyfill')({}),
   require("postcss-flexbugs-fixes")({}),
   require("postcss-nesting")({}),
   require("postcss-normalize")({
