@@ -10,24 +10,10 @@
   --Lato: 'Lato';
 }
 
-a, b {
-  color: var(--red);
-
-  & c, & d {
-    color: black;
-  }
-}
-
 html {
   box-sizing: border-box;
-  font-family: 'Lato';
+  font-family: var(--Lato);
   font-weight: normal;
-}
-
-@media (width >= 500px) and (width <= 1200px) {
- html {
-   background-color: var(--gray2);
- }
 }
 
 *,
@@ -35,5 +21,3 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
-

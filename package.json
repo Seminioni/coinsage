@@ -9,15 +9,15 @@
     "create:dist": "mkdirp dist || trash dist",
     "remove:dist": "trash dist",
     "copy:fonts": "cpx \"src/fonts/**/*.{woff,woff2,tff,otf}\" dist/fonts -w -C",
+    "copy:fonts:build": "cpx \"src/fonts/**/*.{woff,woff2,tff,otf}\" dist/fonts -C",
     "icons": "svgo -q -f src/icons/svg && svg-sprite-generate -d src/icons/svg -o dist/sprite.svg",
     "parcel:start": "parcel ./src/html/index.njk",
-    "parcel:build": "parcel build ./src/html/index.njk",
+    "parcel:build": "parcel build ./src/html/index.njk --no-cache --no-minify",
     "start": "run-p create:dist copy:fonts icons parcel:start",
-    "build": "run-p remove:dist parcel:build"
+    "build": "run-p remove:dist copy:fonts:build icons parcel:build"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
-    "cssnano": "^3.10.0",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.1.2",
     "nunjucks": "^3.0.1",

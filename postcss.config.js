@@ -53,7 +53,6 @@ let plugins = [
 
 if (global.production) {
   plugins.push(
-    require("cssnano")(),
     require("cssm-qpacker")()
   );
 }
