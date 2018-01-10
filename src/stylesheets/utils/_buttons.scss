@@ -20,11 +20,13 @@
   white-space: normal;
   vertical-align: middle;
   user-select: none;
+  appearance: none;
+  outline:  none;
   text-decoration: none;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.32px;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   transition-property: color, border-color, background-color;
   color: var(--btn-color);
   background-color: transparent;
@@ -46,9 +48,12 @@
 
 .btn-black {
   @extend .btn;
-  color: var(--btn--black-color);
   border-color: var(--btn-black-border-color);
   &:hover {
+    color: var(--btn-black-color-hover);
+    border-color: var(--btn-black-border-color-hover);
+  }
+  &:active {
     color: var(--btn-black-color-hover);
     border-color: var(--btn-black-border-color-hover);
   }
@@ -61,6 +66,9 @@
   --btn-gold-border-color: var(--gold);
   --btn-gold-bg-color: var(--gold);
   --btn-gold-bg-color-hover: transparent;
+  --btn-gold-bg-color-active: var(--gray3);
+  --btn-gold-color-active: var(--white);
+  --btn-black-border-color-active: var(--white);
 }
 
 .btn-gold {
@@ -72,5 +80,10 @@
     color: var(--btn-gold-color-hover);
     border-color: var(--btn-black-border-color-hover);
     background-color: var(--btn-gold-bg-color-hover);
+  }
+  &:active {
+    color: var(--btn-gold-color-active);
+    border-color: var(--btn-black-border-color-active);
+    background-color: var(--btn-gold-bg-color-active);
   }
 }

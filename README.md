@@ -31,5 +31,5 @@ npm build || yarn build
 ## Бегает на
 
 * [Yarn](https://yarnpkg.com/en/) — Fast, reliable, and secure dependency management.
-* [Blendid](https://github.com/vigetlabs/blendid) — Blendid (formerly known as Gulp Starter) is a delicious stand-alone blend of tasks and build tools poured into Gulp to form a full-featured modern asset pipeline.
+* [Blendid](https://github.com/vigetlabs/blendid) — (formerly known as Gulp Starter) is a delicious stand-alone blend of tasks and build tools poured into Gulp to form a full-featured modern asset pipeline.
 * [PostCSS](https://rometools.github.io/rome/) — is a tool for transforming styles with JS plugins.
