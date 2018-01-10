@@ -68,7 +68,7 @@
   --btn-gold-bg-color-hover: transparent;
   --btn-gold-bg-color-active: var(--gray3);
   --btn-gold-color-active: var(--white);
-  --btn-black-border-color-active: var(--white);
+  --btn-gold-border-color-active: var(--white);
 }
 
 .btn-gold {
@@ -78,12 +78,41 @@
   color: var(--btn-gold-color);
   &:hover {
     color: var(--btn-gold-color-hover);
-    border-color: var(--btn-black-border-color-hover);
+    border-color: var(--btn-gold-border-color-hover);
     background-color: var(--btn-gold-bg-color-hover);
   }
   &:active {
     color: var(--btn-gold-color-active);
-    border-color: var(--btn-black-border-color-active);
+    border-color: var(--btn-gold-border-color-active);
     background-color: var(--btn-gold-bg-color-active);
+  }
+}
+
+// Attention button parameters
+:root {
+  --btn-attention-color: var(--red);
+  --btn-attention-color-hover: var(--white);
+  --btn-attention-border-color: var(--red);
+  --btn-attention-bg-color: transparent;
+  --btn-attention-bg-color-hover: var(--red);
+  --btn-attention-bg-color-active: var(--red);
+  --btn-attention-color-active: var(--white);
+  --btn-attention-border-color-active: var(--red);
+}
+
+.btn-attention {
+  @extend .btn;
+  background-color: var(--btn-attention-bg-color);
+  border-color: var(--btn-attention-border-color);
+  color: var(--btn-attention-color);
+  &:hover {
+    color: var(--btn-attention-color-hover);
+    border-color: var(--btn-attention-border-color-hover);
+    background-color: var(--btn-attention-bg-color-hover);
+  }
+  &:active {
+    color: var(--btn-attention-color-active);
+    border-color: var(--btn-attention-border-color-active);
+    background-color: var(--btn-attention-bg-color-active);
   }
 }
