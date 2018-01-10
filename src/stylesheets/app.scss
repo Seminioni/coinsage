@@ -1,10 +1,11 @@
 // App styles, imports etc...
 
 @import-normalize;
-@import 'utils/_library';
-@import 'utils/_mixins';
 @import 'utils/_resets';
 @import 'utils/_vars';
+@import 'utils/_mixins';
+@import 'utils/_library';
+@import 'utils/_buttons';
 @import 'utils/_GUI';
 
 html {

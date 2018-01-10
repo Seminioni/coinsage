@@ -3,6 +3,14 @@ let plugins = [
   require("postcss-normalize")({
     allowDuplicates: true
   }),
+  // require('postcss-autoreset')({
+  //   reset: {
+  //     margin: 0,
+  //     padding: 0,
+  //     borderRadius: 0,
+  //     listStyleType: none
+  //   }
+  // }),
   require("postcss-cssnext")({}),
   require('postcss-font-magician')({
     custom: {
