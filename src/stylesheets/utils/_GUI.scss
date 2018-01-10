@@ -1,0 +1,38 @@
+// GUI styles
+
+.h1 {
+  @extend .f-weight-light;
+  @include rhythm(36, 36);
+
+}
+
+.h2 {
+  @extend .f-weight-light;
+  @include rhythm(30, 36);
+}
+
+.h3 {
+  @extend .f-weight-light;
+  @include rhythm(24, 27);
+}
+
+.h4 {
+  @extend .f-weight-light;
+  @include rhythm(18, 18);
+}
+
+.c-gold {
+  color: var(--gold)
+}
+
+.f-weight-light {
+  font-weight: 300;
+}
+
+.f-weight-normal {
+  font-weight: 400;
+}
+
+.f-style-italic {
+  font-style: italic;
+}

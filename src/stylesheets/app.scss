@@ -1,0 +1,28 @@
+// App styles, imports etc...
+
+@import-normalize;
+@import 'utils/_library';
+@import 'utils/_mixins';
+@import 'utils/_resets';
+@import 'utils/_vars';
+@import 'utils/_GUI';
+
+html {
+  box-sizing: border-box;
+  font-family: var(--Lato);
+  font-weight: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 950px;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 320px;
+  margin: 0 auto;
+}
