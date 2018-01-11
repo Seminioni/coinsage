@@ -3,5 +3,8 @@
 {% block content %}
 
   {% include 'components/utils/library/gui.njk' %}
-
+  <div data-controller="hello">
+    <input data-action="keypress->hello#greet" data-target="hello.kek" type="text">
+    <button >Greet</button>
+  </div>
 {% endblock %}

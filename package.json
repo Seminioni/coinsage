@@ -10,7 +10,9 @@
     "build": "gulp build",
     "gh-pages": "gulp gh-pages"
   },
-  "dependencies": {},
+  "dependencies": {
+    "stimulus": "^0.9.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
