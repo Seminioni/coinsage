@@ -36,3 +36,40 @@
 .f-style-italic {
   font-style: italic;
 }
+
+.link {
+  text-decoration: none;
+  color: var(--black);
+  @include setTransitionFor(color, border-color);
+  &:hover {
+    color: var(--gold);
+  }
+  &:active {
+    color: var(--gold);
+  }
+}
+
+.arrow-right {
+  @include arrowSmall(right)
+}
+
+.arrow-left {
+  @include arrowSmall(left)
+}
+
+.up-to-menu {
+  font-size: 11px;
+  color: color(var(--black) l(80%));
+  &:hover {
+    color: color(var(--black) l(0%));
+  }
+}
+
+.sprite {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+}
+.icon-logo svg {
+  stroke: red;
+}

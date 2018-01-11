@@ -38,3 +38,24 @@
       border : 0;
   }
 }
+
+@mixin setTransitionFor($properties...) {
+  transition: 0.2s ease-in-out;
+  transition-property: $properties;
+}
+
+@mixin arrowSmall($side) {
+  position: relative;
+  display: inline-block;
+  @if $side == right {
+    &:after {
+      content: '>';
+      margin-left: 10px;
+    }
+  } @else {
+    &:before {
+      content: '<';
+      margin-right: 10px;
+    }
+  }
+}

@@ -53,7 +53,6 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-font-magician": "^2.1.0",
-    "postcss-initial": "^2.0.0",
     "postcss-normalize": "^4.0.0",
     "pretty-hrtime": "1.0.3",
     "require-dir": "^0.3.2",
