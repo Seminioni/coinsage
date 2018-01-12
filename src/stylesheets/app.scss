@@ -9,10 +9,27 @@
 @import 'utils/_buttons';
 @import 'utils/_GUI';
 
-html {
-  box-sizing: border-box;
+@import 'components/_header';
+@import 'components/_hamburger';
+@import 'components/_mobileMenu';
+@import 'components/_navigation';
+
+@import 'pages/_main';
+
+html,
+body {
   font-family: var(--Lato);
   font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  &.active {
+    overflow: hidden;
+  }
 }
 
 *,
@@ -28,3 +45,61 @@ html {
   min-width: 320px;
   margin: 0 auto;
 }
+
+
+.page__wrapper {
+  position: relative;
+  padding-top: 65px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.logo {
+  text-decoration: none;
+  &--white {
+    svg {
+      fill: var(--white);
+    }
+  }
+  &--gold {
+    svg {
+      fill: var(--gold);
+    }
+  }
+  &--big {
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .logo__icon {
+    vertical-align: middle;
+  }
+}
+
+.lang-switcher {
+  color: var(--white);
+  font-weight: 300;
+
+  .lang-switcher__heading {
+    font-weight: inherit;
+    @include rhythm(18, 18);
+  }
+  .lang-switcher__list-item {
+    display: block;
+    text-transform: capitalize;
+    @include rhythm(30, 27);
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+    @include goldOnHover();
+  }
+
+  .lang-switcher__radio {
+    display: none;
+  }
+  .lang-switcher__radio:checked ~ span {
+    color: var(--gold);
+  }
+}
+

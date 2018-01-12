@@ -116,3 +116,28 @@
     background-color: var(--btn-attention-bg-color-active);
   }
 }
+
+// Exit cross button
+
+.btn-cross {
+  display: inline-block;
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 17px;
+    background-color: var(--black);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+}

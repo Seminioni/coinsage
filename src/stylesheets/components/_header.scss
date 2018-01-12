@@ -1,0 +1,53 @@
+//Core styles
+.header {
+  min-height: calc(100vh - 65px);
+}
+
+.header__top {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  z-index: 10000;
+  min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+
+  .lang-switcher,
+  .nav,
+  .search-field {
+    display: none;
+  }
+}
+
+.header__container {
+  text-align: center;
+
+  .logo {
+    display: none;
+  }
+
+}
+//End core styles
+
+//Mods
+.header--with-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

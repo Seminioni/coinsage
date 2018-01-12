@@ -59,3 +59,14 @@
     }
   }
 }
+
+@mixin goldOnHover() {
+  @include setTransitionFor(color);
+
+  &:hover {
+    color: var(--gold);
+  }
+  &:active {
+    color: var(--gold);
+  }
+}

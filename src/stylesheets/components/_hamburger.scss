@@ -1,0 +1,51 @@
+//Core styles
+.burger {
+  width: 54px;
+  height: 45px;
+  @include setTransitionFor(transform);
+
+  &.active {
+    transform: rotate(90deg);
+  }
+}
+
+.burger__bar {
+  position: relative;
+  width: 20px;
+  display: block;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  background-color: var(--black);
+  transform: translateX(-50%);
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    background-color: var(--black);
+  }
+
+  &:after {
+    transform: translateY(-4px);
+  }
+  &:before {
+    transform: translateY(4px);
+  }
+}
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

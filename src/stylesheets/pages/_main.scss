@@ -1,0 +1,49 @@
+//Core styles
+.page__wrapper--main-page {
+
+  .header {
+    background-image: url(../images/general/main-bg--mobile.jpg)
+  }
+
+  .header__container {
+    padding-top: 60px;
+    .logo {
+      display: none;
+    }
+
+    .header__title {
+      color: var(--white);
+      @include rhythm(24, 27)
+      font-weight: 300;
+      margin-bottom: 100px;
+    }
+
+    .lang-switcher__heading {
+      margin-bottom: 30px;
+    }
+
+  }
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

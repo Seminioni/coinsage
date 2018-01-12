@@ -1,0 +1,32 @@
+//Core styles
+.nav {
+  .nav__item {
+    @include rhythm(18, 18);
+    font-weight: 300;
+
+  }
+}
+
+//End core styles
+
+//Mods
+.nav--vertical {
+  text-align: center;
+  .nav__item {
+    display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+  }
+}
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries
