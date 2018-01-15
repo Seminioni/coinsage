@@ -7,7 +7,7 @@
   --radio-bg-color-active: var(--gold);
   --radio-bd-color-active: var(--gold);
 
-  --radio-size-active: 13px;
+  --radio-size-inner-ring: 13px;
 }
 
 //Core styles
@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   user-select: none;
+  font-weight: 300;
   input[type="radio"] {
     display: none;
   }
@@ -42,8 +43,8 @@
     background: var(--gold);
     border-radius: 50%;
     content: " ";
-    height: var(--radio-size-active);
-    width: var(--radio-size-active);
+    height: var(--radio-size-inner-ring);
+    width: var(--radio-size-inner-ring);
     left: 50%;
     position: absolute;
     top: 50%;

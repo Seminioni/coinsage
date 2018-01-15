@@ -10,9 +10,11 @@
 @import 'utils/_GUI';
 
 @import 'components/_header';
-@import 'components/_hamburger';
-@import 'components/_mobileMenu';
+@import 'components/_footer';
+@import 'components/_burger';
+@import 'components/_mobile-menu';
 @import 'components/_navigation';
+@import 'components/_lang-switcher';
 
 @import 'pages/_main';
 
@@ -39,7 +41,7 @@ body {
 }
 
 .container {
-  max-width: 950px;
+  max-width: 1110px;
   padding-left: 15px;
   padding-right: 15px;
   min-width: 320px;
@@ -52,10 +54,19 @@ body {
   padding-top: 65px;
   width: 100%;
   min-height: 100%;
+  @media (--xl) {
+    padding-top: 0;
+  }
 }
 
 .logo {
   text-decoration: none;
+  background-image: url(../images/content/icon-logo--with-company-name.svg);
+  width: 125px;
+  height: 40px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  display: inline-block;
   &--white {
     svg {
       fill: var(--white);
@@ -77,29 +88,18 @@ body {
   }
 }
 
-.lang-switcher {
-  color: var(--white);
-  font-weight: 300;
-
-  .lang-switcher__heading {
-    font-weight: inherit;
-    @include rhythm(18, 18);
+.socials {
+  .sprite {
+    width: 40px;
   }
-  .lang-switcher__list-item {
-    display: block;
-    text-transform: capitalize;
-    @include rhythm(30, 27);
-    &:not(:last-of-type) {
-      margin-bottom: 15px;
-    }
-    @include goldOnHover();
+}
+
+.link-as-icon {
+  text-decoration: none;
+
+  svg {
+    @include goldOnHover(icon);
   }
 
-  .lang-switcher__radio {
-    display: none;
-  }
-  .lang-switcher__radio:checked ~ span {
-    color: var(--gold);
-  }
 }
 

@@ -6,8 +6,11 @@
   --gray1: #F7F7F7;
   --gray2: #87970E;
   --gray3: #dadada;
+  --gray4: #655f5f;
   --red: #E7576B;
   --green: #6AD67F;
   --Lato: 'Lato';
   --white: #fff;
 }
+
+@custom-media --xl (min-width: 768px);

@@ -41,6 +41,11 @@
 //End mods
 
 //Media queries
+@media (--xl) {
+  .burger {
+    display: none;
+  }
+}
   //Core styles
 
   //End core styles

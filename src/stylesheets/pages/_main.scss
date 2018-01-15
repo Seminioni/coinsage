@@ -2,7 +2,7 @@
 .page__wrapper--main-page {
 
   .header {
-    background-image: url(../images/general/main-bg--mobile.jpg)
+
   }
 
   .header__container {
@@ -27,9 +27,7 @@
 
   //Mods
   .header--with-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url(../images/general/main-bg--mobile.jpg)
   }
 }
 //End core styles
@@ -39,6 +37,13 @@
 //End mods
 
 //Media queries
+@media (--xl) {
+  .page__wrapper--main-page {
+    .header  {
+      background-image: url(../images/general/main-bg--desktop.jpg);
+    }
+  }
+}
   //Core styles
 
   //End core styles

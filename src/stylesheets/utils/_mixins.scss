@@ -1,18 +1,8 @@
 // Mixins
 
-@mixin font-size($sizeValue: 12 ){
-  font-size: $sizeValue + px; //fallback for old browsers
-  font-size: (0.0625 * $sizeValue) + rem;
-}
-
-@mixin line-height($heightValue: 20 ){
-  line-height: $heightValue + px; //fallback for old browsers
-  line-height: (0.0625 * $heightValue) + rem;
-}
-
-@mixin rhythm($sizeValue: 12, $heightValue: 20) {
-  @include font-size($sizeValue);
-  @include line-height($heightValue);
+@mixin rhythm($sizeValue, $heightValue) {
+  font-size: $sizeValue + px;;
+  line-height: $heightValue / $sizeValue;
 }
 
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
@@ -60,13 +50,22 @@
   }
 }
 
-@mixin goldOnHover() {
-  @include setTransitionFor(color);
+@mixin goldOnHover($icon) {
+  @include setTransitionFor(color, fill);
+
 
   &:hover {
-    color: var(--gold);
+    @if $icon == icon {
+      fill: var(--gold);
+    } @else {
+      color: var(--gold);
+    }
   }
   &:active {
-    color: var(--gold);
+    @if $icon == icon {
+      fill: var(--gold);
+    } @else {
+      color: var(--gold);
+    }
   }
 }

@@ -1,12 +1,10 @@
 //Core styles
 .nav {
   .nav__item {
-    @include rhythm(18, 18);
+    @include rhythm(13, 13);
     font-weight: 300;
-
   }
 }
-
 //End core styles
 
 //Mods
@@ -14,8 +12,23 @@
   text-align: center;
   .nav__item {
     display: block;
+  }
+}
+
+.nav--big {
+  .nav__item {
+    @include rhythm(18, 18);
+  }
+}
+
+.nav--footer {
+  .nav__item {
+    @include rhythm(12,12);
     &:not(:last-of-type) {
-      margin-bottom: 25px;
+      margin-bottom: 10px;
+      @media (--xl) {
+        margin-bottom: 0;
+      }
     }
   }
 }

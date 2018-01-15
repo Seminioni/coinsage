@@ -27,6 +27,19 @@
   .nav {
     margin-top: 20px;
   }
+
+  .lang-switcher {
+    margin-top: 50px;
+    .lang-switcher__list-item {
+      @include rhythm(18, 18);
+    }
+  }
+
+
+  .nav__item {
+    margin-bottom: 25px;
+  }
+
 }
 //End core styles
 

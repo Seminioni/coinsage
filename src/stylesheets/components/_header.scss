@@ -24,6 +24,12 @@
   }
 }
 
+.header--with-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .header__container {
   text-align: center;
 
@@ -43,6 +49,55 @@
 //End mods
 
 //Media queries
+@media (--xl) {
+
+  .header__top {
+    background-color: transparent;
+    @include rhythm(13,13);
+
+    .lang-switcher,
+    .nav--header,
+    .search-field {
+      display: initial;
+    }
+
+    .logo {
+      margin-right: 15px;
+    }
+
+    .nav {
+      .nav__item {
+        @media screen and (min-width: 768px) and (max-width: 900px) {
+          @include rhythm(11,11);
+        }
+      }
+    }
+
+    .nav__item {
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
+    }
+
+    .lang-switcher {
+      flex-shrink: 0;
+      margin-left: 15px;
+    }
+
+    .nav--header {
+      display: inline-flex;
+      justify-content: space-between;
+      max-width: 880px;
+      width: 100%;
+    }
+
+    .basket {
+      display: none;
+    }
+  }
+
+}
+
   //Core styles
 
   //End core styles
