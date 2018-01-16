@@ -5,12 +5,13 @@
   --gold: #B49740;
   --gray1: #F7F7F7;
   --gray2: #87970E;
-  --gray3: #dadada;
+  --gray3: #070101;
   --gray4: #655f5f;
+  --gray5: #8d8d8d;
   --red: #E7576B;
   --green: #6AD67F;
   --Lato: 'Lato';
   --white: #fff;
 }
 
-@custom-media --xl (min-width: 768px);
+@custom-media --xl (min-width: 1025px);

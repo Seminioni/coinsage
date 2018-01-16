@@ -19,25 +19,78 @@
 
   .lang-switcher,
   .nav,
-  .search-field {
+  .form--search {
     display: none;
+  }
+
+  .basket {
+    svg {
+      width: 50px;
+    }
   }
 }
 
-.header--with-bg {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.header__top--left {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (--xl) {
+    flex-basis: 5%;
+    transform: translateY(2px);
+    flex-shrink: 0;
+
+  }
+}
+.header__top--right {
+  flex-basis: 0%;
+  justify-content: flex-end;
+  align-items: center;
+  display: none;
+  @media (--xl) {
+    flex-basis: 95%;
+    display: flex;
+  }
 }
 
 .header__container {
+  padding-top: 65px;
   text-align: center;
-
-  .logo {
+  @media (--xl) {
+    padding-top: 110px;
+  }
+  .standalone-logo {
     display: none;
+    @media (--xl) {
+      svg {
+        width: 100px;
+        fill: var(--white);
+      }
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .lang-switcher {
+    @media (--xl) {
+      display: none;
+    }
+  }
+
+  .header__title {
+    color: var(--white);
+    @include rhythm(24, 27)
+    font-weight: 300;
+    margin-bottom: 100px;
+  }
+
+  .lang-switcher__heading {
+    margin-bottom: 30px;
   }
 
 }
+
 //End core styles
 
 //Mods
@@ -51,44 +104,52 @@
 //Media queries
 @media (--xl) {
 
+  .header {
+    min-height: 430px;
+  }
+
   .header__top {
     background-color: transparent;
     @include rhythm(13,13);
 
     .lang-switcher,
     .nav--header,
-    .search-field {
+    .form--search {
       display: initial;
     }
 
     .logo {
-      margin-right: 15px;
+      margin-right: 45px;
     }
 
-    .nav {
-      .nav__item {
-        @media screen and (min-width: 768px) and (max-width: 900px) {
-          @include rhythm(11,11);
-        }
-      }
-    }
-
-    .nav__item {
-      &:not(:last-of-type) {
-        margin-right: 5px;
-      }
-    }
 
     .lang-switcher {
-      flex-shrink: 0;
-      margin-left: 15px;
+      margin-left: 10px;
+      flex-grow: 1;
+    }
+
+
+
+    .form--search {
     }
 
     .nav--header {
+      display: flex;
+      flex-grow: 5;
+      justify-content: center;
+    }
+
+    .nav__inner {
       display: inline-flex;
       justify-content: space-between;
       max-width: 880px;
       width: 100%;
+    }
+
+    .nav__item {
+      &:not(:last-of-type) {
+        margin-right: 15px;
+      }
     }
 
     .basket {

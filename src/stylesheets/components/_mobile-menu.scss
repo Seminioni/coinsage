@@ -26,6 +26,7 @@
 
   .nav {
     margin-top: 20px;
+    margin-bottom: 35px;
   }
 
   .lang-switcher {
@@ -35,9 +36,15 @@
     }
   }
 
+  .form--search {
+    max-width: 220px;
+    margin: auto;
+  }
 
   .nav__item {
-    margin-bottom: 25px;
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
   }
 
 }

@@ -8,6 +8,7 @@
 @import 'utils/_radiobuttons';
 @import 'utils/_buttons';
 @import 'utils/_GUI';
+@import 'utils/form/_index';
 
 @import 'components/_header';
 @import 'components/_footer';
@@ -15,8 +16,10 @@
 @import 'components/_mobile-menu';
 @import 'components/_navigation';
 @import 'components/_lang-switcher';
+@import 'components/_news';
 
 @import 'pages/_main';
+@import 'pages/_lib';
 
 html,
 body {
@@ -46,6 +49,10 @@ body {
   padding-right: 15px;
   min-width: 320px;
   margin: 0 auto;
+  &--padding-off {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 
@@ -59,14 +66,32 @@ body {
   }
 }
 
+
+.icon {
+  text-indent: -99999px;
+  display: inline-block;
+}
+
+.icon--loop {
+  background-image: url(../images/content/icon-loop.svg);
+  width: 10px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .logo {
   text-decoration: none;
-  background-image: url(../images/content/icon-logo--with-company-name.svg);
-  width: 125px;
-  height: 40px;
+  background-image: url(../images/content/icon-logo.svg);
+  width: 45px;
+  height: 45px;
   flex-shrink: 0;
   background-repeat: no-repeat;
   display: inline-block;
+  @media (--xl) {
+    background-image: url(../images/content/icon-logo--with-company-name.svg);
+    width: 125px;
+  }
   &--white {
     svg {
       fill: var(--white);
@@ -96,10 +121,45 @@ body {
 
 .link-as-icon {
   text-decoration: none;
-
   svg {
     @include goldOnHover(icon);
   }
 
 }
 
+.alone-component {
+  padding: 30px 30px;
+  @media (--xl) {
+    padding: 35px 100px;
+  }
+  .alone-component__inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @media (--xl) {
+      flex-direction: row;
+    }
+  }
+
+  p {
+    @include rhythm(18,18);
+    @extend .f-weight-light;
+  }
+
+  .alone-component__side--left {
+    margin-bottom: 30px;
+    @media (--xl) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+}
+
+.alone-component--bdt {
+  border-top: 1px solid var(--gold);
+}
+
+.alone-component--bdb {
+  border-bottom: 1px solid var(--gold);
+}

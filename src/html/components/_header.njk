@@ -1,0 +1,111 @@
+{% from 'macros/helpers.html' import sprite %}
+
+<header data-controller="header" class="header header--with-bg">
+
+    <div class="header__top">
+
+      <div class="header__top--left">
+        <a href="#" data-action="click->header#onBurgerBtnClick" data-target="header.burgerBtn" class="burger">
+          <span class="burger__bar"></span>
+        </a>
+        <a href="index.html" class="logo link-as-icon logo--gold"></a>
+        <a href="index.html" class="basket">
+          {{ sprite('icon-basket') }}
+        </a>
+      </div>
+
+      <div class="header__top--right">
+        <nav class="nav nav--header">
+          <div class="nav__inner">
+            <a href="#" class="nav__item link">Каталог</a>
+            <a href="#" class="nav__item link">О нас</a>
+            <a href="#" class="nav__item link">Покупка</a>
+            <a href="#" class="nav__item link">Контакты</a>
+            <a href="#" class="nav__item link">Личный кабинет</a>
+            <a href="#" class="nav__item link">Избранное</a>
+            <a href="#" class="nav__item link">Корзина</a>
+          </div>
+        </nav>
+
+        <div class="lang-switcher lang-switcher--center">
+            <label class="lang-switcher__list-item">
+              <input type="radio" name="1" class="lang-switcher__radio" checked="true">
+              <span>Ru</span>
+            </label>
+            <label class="lang-switcher__list-item">
+              <input type="radio" name="1" class="lang-switcher__radio">
+              <span>Eng</span>
+            </label>
+        </div>
+        <div class="form form--search">
+          <form>
+            <div class="form__field">
+              <label for="search">
+                <input type="search" name="search" id="search">
+                <i class="icon icon--loop">icon--loop</i>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="header__container">
+      <a href="index.html" class="standalone-logo">
+        {{ sprite('icon-logo') }}
+      </a>
+
+      <p class="header__title">Нумизматический<br>интернет-магазин</p>
+
+      <div class="lang-switcher lang-switcher--vertical lang-switcher--big lang-switcher--white">
+        <h3 class="lang-switcher__heading">Выберите язык</h3>
+        <label class="lang-switcher__list-item">
+          <input type="radio" name="2" class="lang-switcher__radio" checked="true">
+          <span>Ru</span>
+        </label>
+        <label class="lang-switcher__list-item">
+          <input type="radio" name="2" class="lang-switcher__radio">
+          <span>Eng</span>
+        </label>
+      </div>
+    </div>
+
+    <div data-target="header.mobileMenu" class="mobile-menu">
+      <div data-action="click->header#onMobileMenuExitCross" class="btn-cross"></div>
+      <div class="mobile-menu__inner">
+        <nav class="nav nav--vertical nav--big">
+          <a href="#" class="nav__item link">Каталог</a>
+          <a href="#" class="nav__item link">О нас</a>
+          <a href="#" class="nav__item link">Покупка</a>
+          <a href="#" class="nav__item link">Контакты</a>
+          <a href="#" class="nav__item link">Личный кабинет</a>
+          <a href="#" class="nav__item link">Избранное</a>
+        </nav>
+
+        <div class="form form--search">
+          <form>
+            <div class="form__field">
+              <label for="search">
+                <input type="search" name="search" id="search">
+                <i class="icon icon--loop">icon--loop</i>
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="lang-switcher lang-switcher--center">
+          <label class="lang-switcher__list-item">
+            <input type="radio" name="3" class="lang-switcher__radio" checked="true">
+            <span>Ru</span>
+          </label>
+          <label class="lang-switcher__list-item">
+            <input type="radio" name="3" class="lang-switcher__radio">
+            <span>Eng</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+  </header>

@@ -1,5 +1,14 @@
-.page__wrapper--main-page {
+.page__wrapper.page__wrapper--lib-page {
 //Core styles
+  padding-top: 0;
+
+  .header__top {
+    position: static;
+  }
+
+  .header__container {
+    padding-top: 45px;
+  }
 
 //End core styles
 
@@ -10,8 +19,12 @@
       background-image: url(../images/general/main-bg--desktop.jpg);
     }
   }
-//End mods
+//Mods
+}
 
+
+
+//End mods
 
 //Media queries
 
@@ -23,6 +36,3 @@
 
   //End mods
 //End media queries
-}
-
-
