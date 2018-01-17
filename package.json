@@ -8,7 +8,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "gh-pages": "gulp gh-pages"
+    "gh-pages": "gulp gh-pages",
+    "surge": "surge -p ./public -d coinsage.surge.sh"
   },
   "dependencies": {
     "stimulus": "^0.9.0"
