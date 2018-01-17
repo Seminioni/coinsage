@@ -21,6 +21,12 @@
   @include rhythm(18, 18);
 }
 
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
 .c-gold {
   color: var(--gold)
 }
@@ -67,4 +73,20 @@
 
 .sprite {
   display: inline-block;
+}
+
+.icon {
+
+  &-favorite {
+    width: 19px;
+  }
+
+  &-basket {
+    width: 16px;
+  }
+
+  &-diamond {
+    width: 15px;
+  }
+
 }

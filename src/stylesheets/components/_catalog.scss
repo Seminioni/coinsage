@@ -1,0 +1,242 @@
+//Core styles
+.catalog__inner {
+  display: flex;
+  margin-bottom: -30px;
+  flex-wrap: wrap;
+}
+
+.catalog-item-wr {
+  width: 50%;
+  min-height: 275px;
+  margin-bottom: 30px;
+  position: relative;
+
+  &:nth-child(even) {
+    border-left: 1px solid var(--gray6);
+  }
+  @media (--xl) {
+    width: 25%;
+    padding-left: 12px;
+    padding-right: 12px;
+    // .catalog-item {
+    //   padding-left: 60px;
+    //   padding-right: 60px;
+    // }
+    &:not(:first-of-type) {
+      border-left: 1px solid var(--gray6);
+    }
+    .link-as-icon {
+    }
+    &:nth-child(4n + 1) {
+      border-left: 0;
+    }
+
+    &.is-hovered {
+      .catalog-item {
+        padding: 20px;
+        width: calc(100% - 24px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+        position: absolute;
+        top: 0;
+        left: 12px;
+        background-color: white;
+        height: 555px;
+        z-index: 400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .catalog-item__field-container {
+        &[name="heading"] {
+          order: -2;
+        }
+        &[name="price"] {
+          order: -1;
+        }
+      }
+      .catalog-item__heading {
+        font-weight: 300;
+        color: var(--gold);
+        @include rhythm(16,19)
+      }
+
+      .catalog-item__price {
+        order: 0;
+      }
+
+      .icon-favorite,
+      .icon-basket {
+        display: none;
+      }
+
+      button {
+        display: inline-block;
+      }
+    }
+    // &:hover {
+    //   .catalog-item {
+    //     position: absolute;
+    //     background-color: white;
+    //     top: 0;
+    //     width: calc(100% - 24px);
+    //     left: 12px;
+    //     z-index: 400;
+    //     height: 555px;
+    //     .catalog-item__heading {
+    //       // order: ;
+    //     }
+    //   }
+
+    //   button {
+    //     display: inline-block;
+    //   }
+    // }
+  }
+  button {
+    display: none;
+    padding: 0;
+    width: 165px;
+    height: 40px;
+  }
+}
+
+
+.catalog-item {
+  @include setTransitionFor(all);
+  position: relative;
+
+  z-index: 2;
+  // padding-right: 30px;
+  // padding-left: 30px;
+  // padding-bottom: 12px;
+  // padding-top: 12px;
+
+  .link-as-icon {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    svg {
+      fill: var(--gold);
+    }
+  }
+  .icon-basket {
+    top: 35px;
+  }
+
+}
+
+.catalog-item__field-container {
+  padding-right: 30px;
+  padding-left: 30px;
+  @media (--xl) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.catalog-item__field-container--off {
+  @media (--xl) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.catalog-item__img {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+  @media (--xl) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.catalog-item__heading {
+  @include rhythm(13,16);
+  color: var(--black);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+
+}
+
+.catalog-item__desc-box {
+  margin-bottom: 20px;
+}
+
+.catalog-item__desc-field {
+  @include rhythm(13,13);
+  &:not(:last-of-type) {
+    margin-bottom: 7px;
+  }
+}
+
+.catalog-item__prop {
+  @extend .f-weight-light;
+  margin-right: 3px;
+}
+
+.catalog-item__price {
+  display: block;
+  @include rhythm(18,18);
+  text-transform: uppercase;
+  & + .catalog-item__price {
+    margin-top: 5px;
+  }
+  &--old-price {
+    color: var(--red);
+    text-decoration: line-through;
+  }
+  & + .catalog-item__rare {
+    margin-top: 10px;
+  }
+}
+
+.catalog-item__rare {
+  font-size: 0;
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+  @media (--xl) {
+    position: static;
+
+  }
+  .icon-text {
+    display: none;
+    @include rhythm(13,13);
+    @extend .f-weight-light;
+    @extend .f-style-italic;
+    color: var(--gold);
+    margin-right: 5px;
+    @media (--xl) {
+      display: initial;
+    }
+  }
+  .icon-diamond {
+    vertical-align: bottom;
+  }
+
+  svg {
+    fill: var(--gold);
+  }
+}
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   height: 65px;
-
+  @include setTransitionFor(color);
   .lang-switcher,
   .nav,
   .form--search {
@@ -24,9 +24,14 @@
   }
 
   .basket {
+    width: 40px;
+    text-align: center;
     svg {
-      width: 50px;
+      fill: var(--black);
     }
+  }
+  &.is-scrolling {
+    background-color: var(--white);
   }
 }
 
@@ -83,6 +88,9 @@
     @include rhythm(24, 27)
     font-weight: 300;
     margin-bottom: 100px;
+    @media (--xl) {
+      margin-bottom: 0;
+    }
   }
 
   .lang-switcher__heading {

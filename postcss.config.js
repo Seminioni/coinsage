@@ -4,6 +4,7 @@ let plugins = [
     allowDuplicates: true
   }),
   require("postcss-cssnext")({}),
+  require("postcss-clearfix")({}),
   require('postcss-font-magician')({
     custom: {
       'Lato': {
