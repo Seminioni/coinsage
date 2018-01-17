@@ -1,5 +1,11 @@
 # Coinsage.ru frontend repository
 
+### Постоянная ссылка на рабочу версию
+
+```
+http://coinsage.surge.sh/
+```
+
 ### Подготовка
 
 1. Установить [nvm](https://github.com/creationix/nvm)
