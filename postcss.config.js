@@ -46,12 +46,12 @@ let plugins = [
       }
    },
     formats: 'woff2 woff'
-  }),
+  })
 ];
 
 if (global.production) {
   plugins.push(
-    require("cssm-qpacker")()
+    require("css-mqpacker")()
   );
 }
 

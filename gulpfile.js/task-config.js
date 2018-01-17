@@ -2,7 +2,7 @@ module.exports = {
   html        : true,
   images      : true,
   fonts       : true,
-  static      : true,
+  static      : false,
   svgSprite   : true,
   ghPages     : true,
   stylesheets : true,
@@ -24,6 +24,6 @@ module.exports = {
   },
 
   production: {
-    rev: true
+    rev: false
   }
 }
