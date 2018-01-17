@@ -30,19 +30,17 @@
       border-left: 0;
     }
 
-
-
-  }
-
-
-  &:hover {
-    .catalog-on-hover-item {
-      opacity: 1;
+    &:hover {
+      .catalog-on-hover-item {
+        opacity: 1;
+      }
     }
 
 
-
   }
+
+
+
 
   button {
     display: none;
