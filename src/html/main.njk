@@ -17,68 +17,15 @@
         <div class="catalog">
           <div class="catalog__inner">
 
-          {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {# {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %} #}
 
-          <div class="catalog-item-wr is-hovered">
-            <div class="catalog-item">
-                <div class="catalog-item__field-container">
-                  <div class="catalog-item__img">
-                    <img src="../images/content/content-3.png" alt="">
-                  </div>
-                </div>
-                <div class="catalog-item__field-container catalog-item__field-container--off" name="heading">
-                  <h3 class="catalog-item__heading">США 20 долларов 1905 </h3>
-                </div>
-                <div class="catalog-item__field-container">
-                  <div class="catalog-item__desc-box">
-                    <p class="catalog-item__desc-field">
-                      <span class="catalog-item__prop">Состояние:</span>
-                      <span class="catalog-item__value">XF</span>
-                    </p>
-                    <p class="catalog-item__desc-field">
-                      <span class="catalog-item__prop">Год выпуска:</span>
-                      <span class="catalog-item__value">1890</span>
-                    </p>
-                    <p class="catalog-item__desc-field">
-                      <span class="catalog-item__prop">Материал:</span>
-                      <span class="catalog-item__value">медь</span>
-                    </p>
-                    <p class="catalog-item__desc-field">
-                      <span class="catalog-item__prop">Вес:</span>
-                      <span class="catalog-item__value">1,28 г</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="catalog-item__field-container" name="oldPrice">
-                  <strong class="catalog-item__price catalog-item__price--old-price">59 496 ₽</strong>
-                </div>
-                <div class="catalog-item__field-container" name="price">
-                  <strong class="catalog-item__price">59 496 ₽</strong>
-                </div>
-                <div class="catalog-item__field-container">
-                  <i class="catalog-item__rare">
-                    <span class="icon-text">редкая монета</span>
-                    {{ sprite('icon-diamond') }}
-                  </i>
-                </div>
-                <div class="catalog-item__field-container catalog-item__field-container--off">
-                  <button class="btn-black">в избранное</button>
-                </div>
-                <div class="catalog-item__field-container catalog-item__field-container--off">
-                  <button class="btn-gold">в корзину</button>
-                </div>
-                {{ spriteForLink('icon-favorite') }}
-                {{ spriteForLink('icon-basket') }}
-            </div>
-          </div>
-
-            {# {% include 'components/_catalogItem.njk' %} #}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
           </div>
         </div>
       </div>
