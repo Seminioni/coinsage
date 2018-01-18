@@ -5539,6 +5539,10 @@ pngquant-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
+popper.js@^1.12.9:
+  version "1.12.9"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.9.tgz#0dfbc2dff96c451bb332edcfcfaaf566d331d5b3"
+
 portscanner@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/portscanner/-/portscanner-2.1.1.tgz#eabb409e4de24950f5a2a516d35ae769343fbb96"
@@ -6732,6 +6736,10 @@ shellwords@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
 
+siema@^1.4.12:
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/siema/-/siema-1.4.12.tgz#1ca6d4376110271dac13b51a1261ad55a45755c6"
+
 sigmund@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
@@ -7317,6 +7325,12 @@ timers-ext@^0.1.2:
   dependencies:
     es5-ext "~0.10.14"
     next-tick "1"
+
+tippy.js@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-2.0.9.tgz#13876ad1cb962f5d0058146ce1defa25ec6c373e"
+  dependencies:
+    popper.js "^1.12.9"
 
 to-absolute-glob@^0.1.1:
   version "0.1.1"

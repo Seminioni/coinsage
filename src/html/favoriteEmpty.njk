@@ -4,11 +4,13 @@
 
 {% block content %}
 
-<div class="page__wrapper page__wrapper--main-page">
+<div class="page__wrapper page__wrapper--favorite-page">
 
-  {% include 'components/_header.njk' %}
+  {% include 'components/_header-2.njk' %}
 
   <main class="main">
+
+
 
     <section class="available-coins section-wrapper">
       <h2 class="section-title">Монеты в наличии</h2>
@@ -32,18 +34,7 @@
 
     </section>
 
-    <section class="news-section section-wrapper">
-      <h2 class="section-title">Новости</h2>
-      <div class="container container--padding-off">
-        <div class="news-list">
-          {% include 'components/_news.njk' %}
-        </div>
-      </div>
-    </section>
 
-    {% import 'components/_forms.njk' as forms %}
-
-    {{ forms.subscribe() }}
   </main>
 
   {% block footer %}

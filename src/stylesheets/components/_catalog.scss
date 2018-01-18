@@ -14,6 +14,12 @@
   &:nth-child(even) {
     border-left: 1px solid var(--gray6);
   }
+  @media (--sm) {
+    .catalog-item {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
   @media (--xl) {
     width: 25%;
     padding-left: 12px;
@@ -32,31 +38,18 @@
 
     &:hover {
       .catalog-on-hover-item {
+        visibility: visible;
         opacity: 1;
       }
     }
-
-
-  }
-
-
-
-
-  button {
-    display: none;
-    padding: 0;
-    width: 165px;
-    height: 40px;
   }
 }
-
 
 .catalog-item {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 5px;
   position: relative;
-
   .link-as-icon {
     position: absolute;
     top: 0;
@@ -68,13 +61,14 @@
   .icon-basket {
     top: 35px;
   }
-
 }
 
 .catalog-on-hover-item {
   position: absolute;
-  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
   height: 555px;
+  opacity: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
   background-color: var(--white);
   top: 0;
@@ -85,7 +79,8 @@
   padding: 20px 10px;
   flex-direction: column;
   align-items: center;
-  transition: opacity 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  transition-property: visibility opacity;
 
   .catalog-item__heading {
     font-weight: 300;
@@ -100,13 +95,103 @@
   .catalog-item__rare {
     margin-bottom: 15px;
   }
+
+  .catalog-item__img {
+    margin-bottom: 0;
+  }
+
+  .catalog-item__slider-container {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  .catalog-item__arrow {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      width: 15px;
+      background-color: var(--black);
+    }
+    &--prev {
+      left: -32px;
+      &:after,
+      &:before {
+        left: 0;
+        transform: translateY(-50%, -50%);
+      }
+      &:after {
+        transform-origin: 0 100%;
+        transform: rotate(45deg);
+      }
+      &:before {
+        transform-origin: 0 100%;
+        transform: rotate(-45deg);
+      }
+    }
+    &--next {
+      right: -32px;
+      &:after,
+      &:before {
+        right: 0;
+        transform: translateY(-50%, -50%);
+      }
+      &:after {
+        transform-origin: 100% 0%;
+        transform: rotate(45deg);
+      }
+      &:before {
+        transform-origin: 100% 0%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  button {
+    padding: 0;
+    width: 165px;
+    height: 40px;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.catalog-item__pagination {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.catalog-item__pagination-item {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
+  &--active {
+    border-color: var(--gold);
+  }
 }
 
 .catalog-item__img {
   width: 100px;
   height: 100px;
-  display: inline-block;
+  display: block;
   margin-bottom: 15px;
+  text-decoration: none;
   img {
     width: 100%;
   }
@@ -121,7 +206,10 @@
   color: var(--black);
   letter-spacing: 0.5px;
   margin-bottom: 10px;
-
+  word-wrap: break-word;
+  word-break: break-all;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .catalog-item__desc-box {
@@ -129,7 +217,7 @@
 }
 
 .catalog-item__desc-field {
-  @include rhythm(13,13);
+  @include rhythm(14,14);
   &:not(:last-of-type) {
     margin-bottom: 7px;
   }
@@ -156,15 +244,29 @@
   }
 }
 
+.catalog-item__quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.catalog-item__quantity-prop {
+  @include rhythm(13,13);
+  @extend .f-weight-light;
+  margin-right: 30px;
+}
+
 .catalog-item__rare {
   font-size: 0;
   display: inline-block;
   position: absolute;
   bottom: 5px;
   right: 12px;
+
+
   @media (--xl) {
     position: static;
-
   }
   .icon-text {
     display: none;

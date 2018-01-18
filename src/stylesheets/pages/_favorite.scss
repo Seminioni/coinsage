@@ -1,0 +1,33 @@
+.page__wrapper.page__wrapper--favorite-page {
+  //Core styles
+
+    .header__container {
+      padding-top: 45px;
+    }
+
+  //End core styles
+
+  //Mods
+    .header--with-bg {
+      background-image: url(../images/general/favorite-bg--mobile.jpg);
+      @media (--xl) {
+        background-image: url(../images/general/favorite-bg--desktop.jpg);
+      }
+    }
+  //Mods
+  }
+
+
+
+  //End mods
+
+  //Media queries
+
+    //Core styles
+
+    //End core styles
+
+    //Mods
+
+    //End mods
+  //End media queries

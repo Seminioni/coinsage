@@ -23,6 +23,13 @@
     display: none;
   }
 
+  .logo {
+    transform: translateX(-5px);
+    svg {
+      fill: white;
+    }
+  }
+
   .basket {
     width: 40px;
     text-align: center;
@@ -107,6 +114,40 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.header--with-filter {
+  position: relative;
+  padding-top: 115px;
+  @extend .f-weight-light;
+
+  &:after {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(180, 151, 64, 0.42);
+  }
+  .header__top {
+    background-color: var(--white);
+  }
+  .header__container {
+    position: relative;
+    z-index: 1;
+  }
+  .header__title {
+    @include rhythm(36,36);
+    margin-bottom: 25px;
+    @media (--xl) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
 //End mods
 
 //Media queries
