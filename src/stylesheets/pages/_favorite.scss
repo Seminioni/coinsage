@@ -1,9 +1,68 @@
 .page__wrapper.page__wrapper--favorite-page {
   //Core styles
 
-    .header__container {
-      padding-top: 45px;
+  .favorite {
+    padding-top: 50px;
+    padding-bottom: 65px;
+
+    .icon-cross {
+      display: inline-block;
+      top: 5px;
+      right: 25px;
+      @media (--xl) {
+        right: 15px;
+      }
     }
+
+    .arrow {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      .arrow {
+        display: block;
+      }
+      .catalog {
+        position: relative;
+        margin-left: 60px;
+        margin-right: 60px;
+      }
+
+      .catalog__inner {
+        display: block;
+      }
+
+      .catalog-item-wr {
+        width: 100%;
+      }
+
+    }
+    @media (--xl) {
+      .catalog-item {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+
+  }
+
+  .catalog-item-wr {
+    &:hover {
+      .catalog-on-hover-item {
+        display: none;
+      }
+    }
+    .icon-favorite,
+    .icon-basket {
+      display: none;
+    }
+
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
 
   //End core styles
 
@@ -16,7 +75,6 @@
     }
   //Mods
   }
-
 
 
   //End mods

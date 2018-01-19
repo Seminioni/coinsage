@@ -63,6 +63,12 @@ img {
   @include arrowSmall(left)
 }
 
+.link-standart {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .up-to-menu {
   font-size: 11px;
   color: color(var(--black) l(80%));
@@ -89,4 +95,78 @@ img {
     width: 15px;
   }
 
+}
+
+.icon-cross {
+  display: none;
+  position: absolute;
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 15px;
+    background-color: var(--black);
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  &:hover {
+    cursor: pointer;
+  }
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 15px;
+    background-color: var(--black);
+  }
+  &--prev {
+    left: -32px;
+    &:after,
+    &:before {
+      left: 0;
+      transform: translateY(-50%, -50%);
+    }
+    &:after {
+      transform-origin: 0 100%;
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform-origin: 0 100%;
+      transform: rotate(-45deg);
+    }
+  }
+  &--next {
+    right: -32px;
+    &:after,
+    &:before {
+      right: 0;
+      transform: translateY(-50%, -50%);
+    }
+    &:after {
+      transform-origin: 100% 0%;
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform-origin: 100% 0%;
+      transform: rotate(-45deg);
+    }
+  }
 }

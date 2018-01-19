@@ -1,4 +1,3 @@
-// src/controllers/header_controller.js
 import { Controller } from "stimulus"
 import { toggleClass } from "../utils"
 

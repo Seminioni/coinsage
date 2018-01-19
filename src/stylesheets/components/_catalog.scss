@@ -14,20 +14,21 @@
   &:nth-child(even) {
     border-left: 1px solid var(--gray6);
   }
+
   @media (--sm) {
     .catalog-item {
       padding-left: 15px;
       padding-right: 15px;
     }
+    .catalog-on-hover-item {
+      display: none;
+    }
   }
-  @media (--xl) {
+  @media screen and (min-width: 768px) {
     width: 25%;
     padding-left: 12px;
     padding-right: 12px;
-    .catalog-item {
-      padding-left: 60px;
-      padding-right: 60px;
-    }
+
     &:not(:first-of-type) {
       border-left: 1px solid var(--gray6);
     }
@@ -41,6 +42,12 @@
         visibility: visible;
         opacity: 1;
       }
+    }
+  }
+  @media (--xl) {
+    .catalog-item {
+      padding-left: 60px;
+      padding-right: 60px;
     }
   }
 }
@@ -103,55 +110,6 @@
   .catalog-item__slider-container {
     position: relative;
     margin-bottom: 45px;
-  }
-  .catalog-item__arrow {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    transform: translateY(-50%);
-    &:after,
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      height: 1px;
-      width: 15px;
-      background-color: var(--black);
-    }
-    &--prev {
-      left: -32px;
-      &:after,
-      &:before {
-        left: 0;
-        transform: translateY(-50%, -50%);
-      }
-      &:after {
-        transform-origin: 0 100%;
-        transform: rotate(45deg);
-      }
-      &:before {
-        transform-origin: 0 100%;
-        transform: rotate(-45deg);
-      }
-    }
-    &--next {
-      right: -32px;
-      &:after,
-      &:before {
-        right: 0;
-        transform: translateY(-50%, -50%);
-      }
-      &:after {
-        transform-origin: 100% 0%;
-        transform: rotate(45deg);
-      }
-      &:before {
-        transform-origin: 100% 0%;
-        transform: rotate(-45deg);
-      }
-    }
   }
 
   button {
@@ -217,7 +175,7 @@
 }
 
 .catalog-item__desc-field {
-  @include rhythm(14,14);
+  @include rhythm(13,13);
   &:not(:last-of-type) {
     margin-bottom: 7px;
   }

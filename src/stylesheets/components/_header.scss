@@ -1,6 +1,10 @@
 //Core styles
 .header {
   min-height: calc(100vh - 65px);
+  padding-top: 115px;
+  @media (--xl) {
+    padding-top: 160px;
+  }
 }
 
 .header__top {
@@ -17,6 +21,9 @@
   align-items: center;
   height: 65px;
   @include setTransitionFor(color);
+  @media (--xl) {
+    background-color: transparent;
+  }
   .lang-switcher,
   .nav,
   .form--search {
@@ -24,7 +31,7 @@
   }
 
   .logo {
-    transform: translateX(-5px);
+    transform: translateX(-6px);
     svg {
       fill: white;
     }
@@ -66,11 +73,10 @@
 }
 
 .header__container {
-  padding-top: 65px;
   text-align: center;
-  @media (--xl) {
-    padding-top: 110px;
-  }
+  color: var(--white);
+  @extend .f-weight-light;
+
   .standalone-logo {
     display: none;
     @media (--xl) {
@@ -81,7 +87,21 @@
       display: inline-block;
       margin-bottom: 10px;
     }
+  }
 
+  .header__title {
+    @include rhythm(36,36);
+    margin-bottom: 25px;
+    font-weight: 300;
+    @media (--xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .header__description {
+    max-width: 300px;
+    margin: auto;
+    @include rhythm(16,19);
   }
 
   .lang-switcher {
@@ -90,18 +110,13 @@
     }
   }
 
-  .header__title {
-    color: var(--white);
-    @include rhythm(24, 27)
-    font-weight: 300;
-    margin-bottom: 100px;
-    @media (--xl) {
-      margin-bottom: 0;
-    }
+  .lang-switcher__heading {
+    margin-top: 100px;
+    margin-bottom: 30px;
   }
 
-  .lang-switcher__heading {
-    margin-bottom: 30px;
+  a {
+    color: var(--white);
   }
 
 }
@@ -117,8 +132,6 @@
 
 .header--with-filter {
   position: relative;
-  padding-top: 115px;
-  @extend .f-weight-light;
 
   &:after {
     content: '';
@@ -132,20 +145,16 @@
     height: 100%;
     background-color: rgba(180, 151, 64, 0.42);
   }
-  .header__top {
-    background-color: var(--white);
-  }
+
   .header__container {
     position: relative;
     z-index: 1;
   }
-  .header__title {
-    @include rhythm(36,36);
-    margin-bottom: 25px;
-    @media (--xl) {
-      margin-bottom: 30px;
-    }
-  }
+
+}
+
+.header__top--white {
+  background-color: var(--white);
 }
 
 //End mods
@@ -158,7 +167,6 @@
   }
 
   .header__top {
-    background-color: transparent;
     @include rhythm(13,13);
 
     .lang-switcher,
@@ -177,10 +185,6 @@
       flex-grow: 1;
     }
 
-
-
-    .form--search {
-    }
 
     .nav--header {
       display: flex;

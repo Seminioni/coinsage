@@ -1,5 +1,19 @@
 .page__wrapper--main-page {
 //Core styles
+  .header {
+    padding-top: 55px;
+    @media (--xl) {
+      padding-top: 130px;
+    }
+
+    .header__title {
+      @include rhythm(24, 27)
+      @media (--xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .available-coins  {
     .section-title {
       margin-bottom: 40px;

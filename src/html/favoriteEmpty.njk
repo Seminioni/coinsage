@@ -10,14 +10,11 @@
 
   <main class="main">
 
-
-
-    <section class="available-coins section-wrapper">
-      <h2 class="section-title">Монеты в наличии</h2>
+    <section class="favorite section-wrapper">
 
       <div class="container container--padding-off">
-        <div class="catalog">
-          <div class="catalog__inner">
+        <div data-controller="favorite" class="catalog">
+          <div  class="catalog__inner">
 
             {% include 'components/_catalogItem.njk' %}
             {% include 'components/_catalogItem.njk' %}
@@ -29,6 +26,9 @@
             {% include 'components/_catalogItem.njk' %}
 
           </div>
+
+          <span data-target="favorite.prev" class="arrow arrow--prev"></span>
+          <span data-target="favorite.next" class="arrow arrow--next"></span>
         </div>
       </div>
 
