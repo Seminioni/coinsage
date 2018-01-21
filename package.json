@@ -9,7 +9,7 @@
     "start": "gulp",
     "build": "gulp build",
     "gh-pages": "gulp gh-pages",
-    "surge": "surge -p ./public -d coinsage.surge.sh"
+    "deploy": "yarn build && surge -p ./public -d coinsage.surge.sh"
   },
   "dependencies": {
     "siema": "^1.4.12",
