@@ -1,0 +1,58 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--favorite-page">
+
+  {% include 'components/_header-2.njk' %}
+
+  <main class="main">
+
+    <section class="favorite section-wrapper">
+
+      <div class="container container--padding-off">
+        <div data-controller="catalog-carousel" class="catalog">
+          <div  class="catalog__inner">
+
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+
+          </div>
+
+          <span data-target="favorite.prev" class="arrow arrow--prev"></span>
+          <span data-target="favorite.next" class="arrow arrow--next"></span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="register-form form-wrapper section-wrapper section-wrapper--gray-bg">
+      <h2 class="section-title">Зарегистрироваться</h2>
+
+      <div class="container">
+        {% import 'components/_forms.njk' as forms %}
+
+        {{ forms.registration() }}
+      </div>
+    </section>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

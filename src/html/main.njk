@@ -10,7 +10,7 @@
 
   <main class="main">
 
-    <section data-controller="availableCoins" class="available-coins section-wrapper">
+    <section data-controller="available-coins" class="available-coins section-wrapper">
       <h2 class="section-title">Монеты в наличии</h2>
 
       <div class="container container--padding-off">
@@ -41,9 +41,15 @@
       </div>
     </section>
 
-    {% import 'components/_forms.njk' as forms %}
+    <section class="subscribtion-form form-wrapper section-wrapper">
 
-    {{ forms.subscribe() }}
+      <div class="container">
+        {% import 'components/_forms.njk' as forms %}
+
+        {{ forms.subscribe() }}
+      </div>
+    </section>
+
   </main>
 
   {% block footer %}

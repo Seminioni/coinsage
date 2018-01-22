@@ -1,7 +1,9 @@
 .page__wrapper.page__wrapper--lib-page {
 //Core styles
   padding-top: 0;
-
+  .header {
+    padding-top: 0;
+  }
   .header__top {
     position: static;
   }

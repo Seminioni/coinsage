@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="343" height="150" viewBox="0 0 343 150">
-  <g fill-rule="evenodd" stroke="#CCC" stroke-linecap="round" stroke-width=".642">
-    <g transform="translate(121 .087)">
-      <polygon points="65.008 .284 .772 37.37 .772 111.543 65.008 148.63 129.243 111.543 129.243 37.37"/>
-      <polyline points="66.079 148.327 66.079 73.385 129.236 37.37"/>
-    </g>
-    <path d="M121.5777,37.457 L187.1167,73.562"/>
-    <polyline points="165.606 12.15 229.183 49.463 229.108 77.879 219.69 78.272 210.272 88.476 210.272 60.359 147.248 22.749"/>
-    <g transform="translate(0 109.087)">
-      <path d="M.3208.1679L105.5518.1679M263.398.1679L342.321.1679"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="343" height="150" viewBox="0 0 343 150"><defs><path id="8210a" d="M888 470.37l-64.23 37.09v74.17l64.24 37.09 64.23-37.1v-74.16z"/><path id="8210b" d="M889.08 618.42v-74.94l63.16-36.02"/><path id="8210c" d="M823.58 507.46l65.54 36.1"/><path id="8210d" d="M867.6 482.15l63.58 37.31-.07 28.42-9.42.4-9.42 10.2v-28.12l-63.02-37.61"/><path id="8210e" d="M702.32 579.25h105.23"/><path id="8210f" d="M965.4 579.25h78.92"/></defs><g><g transform="translate(-702 -470)"><use fill="#fff" fill-opacity="0" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="50" stroke-width=".64" xlink:href="#8210a"/></g><g transform="translate(-702 -470)"><use fill="#fff" fill-opacity="0" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="50" stroke-width=".64" xlink:href="#8210b"/></g><g transform="translate(-702 -470)"><use fill="#fff" fill-opacity="0" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="50" stroke-width=".64" xlink:href="#8210c"/></g><g transform="translate(-702 -470)"><use fill="#fff" fill-opacity="0" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="50" stroke-width=".64" xlink:href="#8210d"/></g><g transform="translate(-702 -470)"><use fill="#fff" fill-opacity="0" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="50" stroke-width=".64" xlink:href="#8210e"/></g><g transform="translate(-702 -470)"><use fill="#fff" fill-opacity="0" stroke="#ccc" stroke-linecap="round" stroke-miterlimit="50" stroke-width=".64" xlink:href="#8210f"/></g></g></svg>

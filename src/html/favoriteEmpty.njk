@@ -10,28 +10,29 @@
 
   <main class="main">
 
-    <section class="favorite section-wrapper">
+    <section class="favorite favorite--empty-list section-wrapper">
 
-      <div class="container container--padding-off">
-        <div data-controller="favorite" class="catalog">
-          <div  class="catalog__inner">
+      <div class="container">
+        <div class="favorite__empty-container">
 
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
-            {% include 'components/_catalogItem.njk' %}
+          <img class="favorite__empty-icon" src="../images/content/icon-box.svg" alt="">
 
-          </div>
+          <h3 class="favorite__subHeading">У вас пока нет сохраненных товаров</h3>
 
-          <span data-target="favorite.prev" class="arrow arrow--prev"></span>
-          <span data-target="favorite.next" class="arrow arrow--next"></span>
+          <a href="#" class="link arrow-left">в каталог</a>
         </div>
       </div>
 
+    </section>
+
+    <section class="register-form form-wrapper section-wrapper section-wrapper--gray-bg">
+      <h2 class="section-title">Зарегистрироваться</h2>
+
+      <div class="container">
+        {% import 'components/_forms.njk' as forms %}
+
+        {{ forms.registration() }}
+      </div>
     </section>
 
 

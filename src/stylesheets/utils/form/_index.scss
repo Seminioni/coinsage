@@ -1,5 +1,60 @@
 //Core styles
+.form-wrapper {
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+
 .form {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number']
+  input[type='tel'],
+  input[type='search'] {
+    background-color: var(--white);
+    width: 100%;
+    border-radius: 0;
+    outline: 0;
+    appearance: none;
+    border: 1px solid var(--gray6);
+    @include rhythm(13,13);
+    font-weight: 300;
+    padding: 16px;
+    &:focus {
+      border-color: var(--gold);
+    }
+    &:invalid {
+      border-color: var(--red);
+    }
+  }
+
+  input[type='submit'] {
+    margin-top: 15px;
+  }
+
+}
+
+.form__field + .form__field {
+  margin-top: 25px;
+}
+
+.form__field-heading {
+  display: inline-block;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+//End core styles
+
+//Mods
+.form--search,
+.form--subscribtion {
+  // max-width: 690px;
   input[type='text'],
   input[type='email'],
   input[type='password'],
@@ -16,11 +71,9 @@
     @include rhythm(13,13);
     font-weight: 300;
     padding: 5px 5px 5px 0;
+
   }
 }
-//End core styles
-
-//Mods
 .form--search {
   label {
     display: inline-flex;
@@ -38,12 +91,11 @@
 }
 
 .form--subscribtion {
-  background-color: var(--gray5);
   color: var(--white);
   padding: 35px 40px 43px 40px;
   text-align: center;
   @media (--xl) {
-    padding: 70px 40px;
+    padding: 15px 40px 70px 40px;
   }
   .form__heading,
   .form__clarification {
@@ -52,6 +104,7 @@
   .form__heading {
     @include rhythm(20,20);
     margin-bottom: 25px;
+    text-align: center;
   }
   .form__clarification {
     @include rhythm(13,13);
@@ -74,7 +127,7 @@
     }
     @media (--xl) {
       display: block;
-      margin-right: 90px;
+      margin-right: 70px;
     }
   }
   label[for="subscribe"] {
@@ -85,13 +138,15 @@
   input[type="text"] {
     color: var(--white);
     border-color: var(--white);
+    &:focus {
+      border-color: var(--white);
+    }
     @include placeholder {
       color: var(--white);
       opacity: 1;
     }
     @media (--xl) {
       padding-right: 100px;
-
     }
   }
   input[type="submit"] {
@@ -109,6 +164,60 @@
   }
 
 }
+
+.form__field--centered {
+  text-align: center;
+  @media (--xl) {
+    text-align: left;
+  }
+}
+
+.form__field--one-half-width {
+  @media (--xl) {
+    max-width: 460px;
+  }
+}
+
+.register-form {
+  padding-bottom: 30px;
+  @media (--xl) {
+    padding-bottom: 90px;
+  }
+}
+
+.register-form__success-container {
+  text-align: center;
+  display: none;
+  h3 {
+    @extend .f-weight-light;
+    color: var(--gold);
+    margin-bottom: 15px;
+    @media (--xl) {
+      @include rhythm(30,30);
+    }
+  }
+  p {
+    @extend .f-weight-light;
+    @media (--xl) {
+      @include rhythm(24,24);
+    }
+  }
+}
+
+.register-form--success {
+  .register-form__success-container {
+    display: block;
+  }
+  @media (--xl) {
+    padding-top: 280px;
+    padding-bottom: 280px;
+  }
+}
+
+.subscribtion-form {
+  background-color: var(--gray5);
+}
+
 //End mods
 
 //Media queries

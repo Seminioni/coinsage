@@ -53,13 +53,16 @@ img {
   &:active {
     color: var(--gold);
   }
+
 }
 
 .arrow-right {
+  @extend .f-weight-light;
   @include arrowSmall(right)
 }
 
 .arrow-left {
+  @extend .f-weight-light;
   @include arrowSmall(left)
 }
 
@@ -100,6 +103,8 @@ img {
 .icon-cross {
   display: none;
   position: absolute;
+  width: 25px;
+  height: 25px;
   &:after,
   &:before {
     content: '';
@@ -107,13 +112,15 @@ img {
     top: 50%;
     height: 1px;
     width: 15px;
+    left: 50%;
+    top: 50%;
     background-color: var(--black);
   }
   &:after {
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
   }
   &:before {
-    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 
@@ -135,7 +142,8 @@ img {
     top: 50%;
     height: 1px;
     width: 15px;
-    background-color: var(--black);
+    background-color: color(var(--black) l(80%));
+    @include setTransitionFor(background);
   }
   &--prev {
     left: -32px;
@@ -167,6 +175,12 @@ img {
     &:before {
       transform-origin: 100% 0%;
       transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    &:after,
+    &:before {
+      background-color: color(var(--black) l(0));
     }
   }
 }
