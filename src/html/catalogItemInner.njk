@@ -18,57 +18,66 @@
           <p class="catalog-item__price">59 496 ₽</p>
 
           <div class="catalog-item__info">
+            <div class="catalog-item__preview">
+            </div>
             <div class="catalog-item__info-top catalog-item__slider-container">
-              <div data-target="catalog-item.slider" class="catalog-item__slider catalog-item__img">
-                  <a href="#"><img src="../images/content/content-6.png" alt=""></a>
-                  <a href="#"><img src="../images/content/content-4.jpg" alt=""></a>
-                  <a href="#"><img src="../images/content/content-5.jpg" alt=""></a>
+              <a href="#" data-action="catalog-item#openModal" class="link-as-icon sprite icon-expand">
+                <img src="../images/content/icon-expand.svg"  alt="">
+              </a>
+              <div class="catalog-item__slider-container">
+                <div data-target="catalog-item.slider" class="catalog-item__slider catalog-item__img">
+                  <img class="catalog-item__img-item" src="../images/content/content-7.png" data-zoom="../images/content/content-8.png" alt="">
+                  <img class="catalog-item__img-item" src="../images/content/content-5.jpg" data-zoom="../images/content/content-7.png" alt="">
+                  <img class="catalog-item__img-item" src="../images/content/content-6.png" data-zoom="../images/content/content-8.png" alt="">
               </div>
               <span data-target="catalog-item.prev" class="arrow arrow--prev"></span>
               <span data-target="catalog-item.next" class="arrow arrow--next"></span>
+              </div>
+
             </div>
-          </div>
-          <div class="catalog-item__info-bottom">
-            <div class="catalog-info__desc">
-              <div class="catalog-info__desc-item">
-                <p class="catalog-info__prop">Состояние:</p>
-                <p class="catalog-info__value">VF</p>
+            <div class="catalog-item__info-bottom">
+              <div class="catalog-info__desc">
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Состояние:</p>
+                  <p class="catalog-info__value">VF</p>
+                </div>
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Год выпуска:</p>
+                  <p class="catalog-info__value">1890</p>
+                </div>
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Материал:</p>
+                  <p class="catalog-info__value">медь</p>
+                </div>
               </div>
-              <div class="catalog-info__desc-item">
-                <p class="catalog-info__prop">Год выпуска:</p>
-                <p class="catalog-info__value">1890</p>
+              <div class="catalog-item__buttons">
+                <button class="catalog-item__button btn-black">в избранное</button>
+                <button class="catalog-item__button btn-gold">в корзину</button>
               </div>
-              <div class="catalog-info__desc-item">
-                <p class="catalog-info__prop">Материал:</p>
-                <p class="catalog-info__value">медь</p>
-              </div>
-            </div>
-            <div class="catalog-item__buttons">
-              <button class="catalog-item__button btn-black">в избранное</button>
-              <button class="catalog-item__button btn-gold">в корзину</button>
-            </div>
-            <div class="catalog-info__desc catalog-info__desc--vertical">
-              <div class="catalog-info__desc-item">
-                <p class="catalog-info__prop">Продаем:</p>
-                <p class="catalog-info__value">59 496 ₽</p>
-              </div>
-              <div class="catalog-info__desc-item">
-                <p class="catalog-info__prop">Покупаем:</p>
-                <p class="catalog-info__value">60 000 ₽</p>
-              </div>
-              <div class="catalog-info__desc-item catalog-info__desc-item--stepper">
-                <p class="catalog-info__prop">Кол-во:</p>
-                <div class="catalog-info__value">
-                  <div data-controller="stepper" class="catalog-item__quantity-value stepper">
-                    <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--left"></span>
-                    <input data-target="stepper.stepperInput" type="text" class="stepper__side stepper__side--middle" value="0" readonly="">
-                    <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--right"></span>
+              <div class="catalog-info__desc-vertical">
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Продаем:</p>
+                  <p class="catalog-info__value">59 496 ₽</p>
+                </div>
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Покупаем:</p>
+                  <p class="catalog-info__value">60 000 ₽</p>
+                </div>
+                <div class="catalog-info__desc-item catalog-info__desc-item--stepper">
+                  <p class="catalog-info__prop">Кол-во:</p>
+                  <div class="catalog-info__value">
+                    <div data-controller="stepper" class="catalog-item__quantity-value stepper">
+                      <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--left"></span>
+                      <input data-target="stepper.stepperInput" type="text" class="stepper__side stepper__side--middle" value="0" readonly="">
+                      <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--right"></span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -120,6 +129,7 @@
 
     </section>
 
+     {% include 'components/_modal.njk' %}
   </main>
 
   {% block footer %}

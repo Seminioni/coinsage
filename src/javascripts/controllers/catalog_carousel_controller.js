@@ -5,13 +5,14 @@ export default class CatalogCarousel extends Controller {
   initialize() {
 
     const container = this.element.querySelector(
-      ".catalog-item__slider-container"
+      ".catalog__inner"
     );
+
     const prev = this.targets.find('prev');
     const next = this.targets.find('next');
 
     const mySiema = initSiema({
-      selector: ".catalog-carousel .catalog__inner",
+      selector: container,
       duration: 500,
       easing: "ease-in-out",
       perPage: {

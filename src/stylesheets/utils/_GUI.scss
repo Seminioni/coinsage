@@ -98,6 +98,10 @@ img {
     width: 15px;
   }
 
+  &-expand {
+    width: 22px;
+  }
+
 }
 
 .icon-cross {
@@ -115,12 +119,22 @@ img {
     left: 50%;
     top: 50%;
     background-color: var(--black);
+    @media (--xl) {
+      background-color: color(var(--black) l(50%));
+      @include setTransitionFor(background);
+    }
   }
   &:after {
     transform: translate(-50%, -50%) rotate(45deg);
   }
   &:before {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:hover {
+    &:after,
+    &:before {
+      background-color: var(--black);
+    }
   }
 }
 

@@ -3,6 +3,16 @@
 
   .favorite {
     padding-bottom: 65px;
+
+
+    .icon-cross {
+      display: inline-block;
+      top: 0px;
+      right: 5px;
+      @media (--xl) {
+        right: 15px;
+      }
+    }
   }
   .favorite__empty-icon {
     margin-bottom: 40px;

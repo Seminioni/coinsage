@@ -1,6 +1,19 @@
 import Siema from 'siema';
 
 export class SiemaWithDots extends Siema {
+  addArrows() {
+    this.arrowLeft = document.createElement('span');
+    this.arrowRight = document.createElement('span');
+    this.arrowLeft.classList.add('arrow', 'arrow--prev');
+    this.arrowRight.classList.add('arrow', 'arrow--next');
+
+    this.selector.parentNode.insertBefore(this.arrowLeft, this.selector.nextSibling);
+    this.selector.parentNode.insertBefore(this.arrowRight, this.selector.nextSibling);
+
+    this.arrowLeft.addEventListener('click', () => this.prev())
+    this.arrowRight.addEventListener('click', () => this.next())
+  }
+
   addDots() {
     // create a contnier for all dots
     // add a class 'dots' for styling reason
@@ -36,6 +49,33 @@ export class SiemaWithDots extends Siema {
       this.dots.querySelectorAll('div')[i].classList[addOrRemove]('catalog-item__pagination-item--active');
     }
   }
+
+  addPreviews(container) {
+
+    for(let i = 0; i < this.innerElements.length; i++) {
+      const preview = document.createElement('div');
+
+      preview.classList.add('catalog-item__preview-item');
+
+      preview.appendChild(document.importNode(this.innerElements[i],true));
+
+      preview.addEventListener('click', () => {
+        this.goTo(i);
+      })
+
+      container.appendChild(preview);
+    }
+  }
+
+  updatePreviews(container) {
+    // loop through all dots
+    for(let i = 0; i < container.querySelectorAll('.catalog-item__preview-item').length; i++) {
+      // if current dot matches currentSlide prop, add a class to it, remove otherwise
+      const addOrRemove = this.currentSlide === i ? 'add' : 'remove';
+      container.querySelectorAll('.catalog-item__preview-item')[i].classList[addOrRemove]('catalog-item__preview-item--active');
+    }
+  }
+
 
 }
 

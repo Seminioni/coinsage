@@ -10,11 +10,11 @@
 
   <main class="main">
 
-    <section class="favorite section-wrapper">
+    <section class="favorite catalog-carousel section-wrapper">
 
       <div class="container container--padding-off">
-        <div data-controller="catalog-carousel" class="catalog">
-          <div  class="catalog__inner">
+        <div data-controller="catalog-carousel" class=" catalog">
+          <div class="catalog__inner">
 
             {% include 'components/_catalogItem.njk' %}
             {% include 'components/_catalogItem.njk' %}
@@ -27,8 +27,8 @@
 
           </div>
 
-          <span data-target="favorite.prev" class="arrow arrow--prev"></span>
-          <span data-target="favorite.next" class="arrow arrow--next"></span>
+          <span data-target="catalog-carousel.prev" class="arrow arrow--prev"></span>
+          <span data-target="catalog-carousel.next" class="arrow arrow--next"></span>
         </div>
       </div>
 

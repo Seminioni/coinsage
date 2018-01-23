@@ -5,15 +5,6 @@
     padding-bottom: 65px;
   }
 
-  .icon-cross {
-    display: inline-block;
-    top: 0px;
-    right: 5px;
-    @media (--xl) {
-      right: 15px;
-    }
-  }
-
   .arrow {
     display: none;
   }
@@ -37,6 +28,7 @@
     }
 
   }
+
   @media (--xl) {
     .catalog-item {
       padding-left: 30px;
@@ -56,7 +48,6 @@
     }
 
   }
-
 
 }
 //End core styles
