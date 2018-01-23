@@ -113,6 +113,9 @@
       &:not(:last-of-type) {
         margin-bottom: 30px;
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
     .catalog-item__img {
       width: 200px;
