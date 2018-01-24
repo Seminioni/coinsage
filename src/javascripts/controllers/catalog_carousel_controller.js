@@ -8,9 +8,6 @@ export default class CatalogCarousel extends Controller {
       ".catalog__inner"
     );
 
-    const prev = this.targets.find('prev');
-    const next = this.targets.find('next');
-
     const mySiema = initSiema({
       selector: container,
       duration: 500,
@@ -24,12 +21,12 @@ export default class CatalogCarousel extends Controller {
       multipleDrag: false,
       threshold: 20,
       loop: true,
-      onInit: function() {},
+      onInit: function() {
+        this.addArrows()
+      },
       onChange: function() {}
     });
 
-    prev.addEventListener('click', () => mySiema.prev());
-    next.addEventListener('click', () => mySiema.next());
 
     if (window.matchMedia("screen and (max-width: 767px)").matches) {
       mySiema.destroy(true)

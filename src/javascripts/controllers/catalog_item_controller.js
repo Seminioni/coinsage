@@ -25,7 +25,6 @@ export default class CatalogItem extends Controller {
           sliderContainer.insertAdjacentElement("beforeend", newImage);
         });
 
-        // sliderContainer.insertAdjacentElement("beforeend", arrowPrev, arrowNext);
 
         const modalContent = document.querySelector(".modal .modal-content");
 
@@ -63,18 +62,10 @@ export default class CatalogItem extends Controller {
         document.querySelectorAll(".modal .catalog-item__img-item").forEach(img => {
             new Drift(img, {
               paneContainer: document.querySelector('.modal .modal__slider'),
-              // inlineContainer: document.querySelector('.modal .zoom-box'),
               inlinePane: true,
               containInline: true,
-              // inlineOffsetY: -85,
-              // containInline: true,
-              // hoverBoundingBox: true
-
             });
         })
-
-        // prev.addEventListener('click', () => mySiema.prev());
-        // next.addEventListener('click', () => mySiema.next());
       },
       clickOutside: false
     });

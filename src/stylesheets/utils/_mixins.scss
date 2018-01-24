@@ -37,11 +37,11 @@
 @mixin arrowSmall($side) {
   position: relative;
   display: inline-block;
-  &:after,
-  &:before {
-    transform: translateY(5px);
-  }
   @if $side == right {
+    &:after,
+    &:before {
+      vertical-align: text-bottom;
+    }
     &:after {
       content: '>';
       margin-left: 10px;

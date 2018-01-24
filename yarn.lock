@@ -43,6 +43,10 @@
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-0.9.0.tgz#b655c233015bea0d02b66ec709ef15b4b0060a57"
 
+Tabby@cferdinandi/tabby:
+  version "11.2.0"
+  resolved "https://codeload.github.com/cferdinandi/tabby/tar.gz/24530785fe78b5e6747781baec7390d2b9caaa56"
+
 a-sync-waterfall@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/a-sync-waterfall/-/a-sync-waterfall-1.0.0.tgz#38e8319d79379e24628845b53b96722b29e0e47c"

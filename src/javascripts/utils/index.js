@@ -13,3 +13,9 @@ export function toggleClass(el, className) {
     el.className = classes.join(' ');
   }
 }
+
+export function getSiblingsOf(el) {
+  return Array.prototype.filter.call(el.parentNode.children, function(child){
+    return child !== el;
+  });
+}

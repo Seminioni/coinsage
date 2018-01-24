@@ -1,5 +1,13 @@
 .page__wrapper--main-page {
 //Core styles
+  .available-coins {
+    .section-title {
+      display: none;
+      @media (--m) {
+        display: block;
+      }
+    }
+  }
   .header {
     padding-top: 55px;
     @media (--xl) {

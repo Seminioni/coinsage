@@ -19,6 +19,7 @@ html {
 }
 
 body {
+
   &.menu-is-open {
     overflow: hidden;
   }
@@ -49,6 +50,13 @@ body {
   min-height: 100%;
   @media (--xl) {
     padding-top: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .main {
+      flex: 1;
+    }
   }
 }
 
@@ -236,6 +244,8 @@ body {
 @import 'components/_memo';
 @import 'components/_catalog-carousel';
 @import 'components/_modal';
+@import 'components/_tabs';
+@import 'components/_sales-rate';
 
 @import 'pages/_main';
 @import 'pages/_lib';
