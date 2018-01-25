@@ -57,11 +57,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (--m) {
+    transform: translateY(2px);
+
+  }
   @media (--xl) {
     flex-basis: 5%;
-    transform: translateY(2px);
     flex-shrink: 0;
-
   }
 }
 .header__top--right {
@@ -163,7 +165,7 @@
 //End mods
 
 //Media queries
-@media (--xl) {
+@media (--m) {
 
   .header {
     min-height: 430px;
@@ -178,9 +180,7 @@
       display: initial;
     }
 
-    .logo {
-      margin-right: 45px;
-    }
+
 
 
     .lang-switcher {
@@ -208,11 +208,18 @@
       }
     }
 
-    .basket {
-      display: none;
-    }
+
   }
 
+}
+
+@media (--xl) {
+  .basket {
+    display: none;
+  }
+  .logo {
+    margin-right: 45px;
+  }
 }
 
   //Core styles

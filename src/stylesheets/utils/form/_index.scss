@@ -1,7 +1,11 @@
 //Core styles
 .form-wrapper {
+  padding-bottom: 30px;
   .section-title {
     margin-bottom: 40px;
+  }
+  @media (--m) {
+    padding-bottom: 90px;
   }
 }
 
@@ -39,9 +43,12 @@
 
 }
 
-.form__field + .form__field {
-  margin-top: 25px;
+.form__field {
+  & + .form__field {
+    margin-top: 25px;
+  }
 }
+
 
 .form__field-heading {
   display: inline-block;
@@ -182,9 +189,9 @@
 }
 
 .register-form {
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   @media (--xl) {
-    padding-bottom: 90px;
+    // padding-bottom: 90px;
   }
 }
 
@@ -219,6 +226,10 @@
 
 .subscribtion-form {
   background-color: var(--gray5);
+  padding-bottom: 0;
+  @media (--m) {
+    padding-bottom: 0;
+  }
 }
 
 //End mods

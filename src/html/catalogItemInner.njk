@@ -6,14 +6,24 @@
 
 <div class="page__wrapper page__wrapper--catalog-item-page">
 
-  {% include 'components/_header-2.njk' %}
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
 
   <main class="main">
 
     <section data-controller="catalog-item" class="catalog-item-wrapper section-wrapper">
       <div class="catalog-item">
         <div class="container">
-          <a href="#" class="link back-home arrow-left">в каталог</a>
+          <a href="catalog.html" class="link back-home arrow-left">в каталог</a>
           <h1 class="catalog-item__heading">CША 1 доллар 1921 D</h1>
           <p class="catalog-item__price">59 496 ₽</p>
 

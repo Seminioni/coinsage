@@ -1,0 +1,108 @@
+{% extends 'layouts/application.njk' %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--catalog-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Каталог</h1>
+
+      <div class="header__description">
+        {# <p>фильтры</p> #}
+
+        <div class="select select--white">
+          <select id="select-money">
+            <option value="gold">Монета</option>
+            <option value="argentum">Серебро</option>
+            <option value="platina">Платина</option>
+            <option value="metal">Металл</option>
+          </select>
+        </div>
+        <div class="select select--white">
+          <select id="select-country">
+            <option value="gold">Россия</option>
+            <option value="argentum">Серебро</option>
+            <option value="platina">Платина</option>
+            <option value="metal">Металл</option>
+          </select>
+        </div>
+        <div class="select select--white">
+          <select id="select-year">
+            <option value="gold">1976</option>
+            <option value="argentum">Серебро</option>
+            <option value="platina">Платина</option>
+            <option value="metal">Металл</option>
+          </select>
+        </div>
+        <div class="select select--white">
+          <select id="select-price">
+            <option value="gold">Золото</option>
+            <option value="argentum">Серебро</option>
+            <option value="platina">Платина</option>
+            <option value="metal">Металл</option>
+          </select>
+        </div>
+        <div class="select select--white">
+          <select id="select-material">
+            <option value="gold">Золото</option>
+            <option value="argentum">Серебро</option>
+            <option value="platina">Платина</option>
+            <option value="metal">Металл</option>
+          </select>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+
+
+  <main class="main">
+
+
+    <div class="catalog section-wrapper">
+      <div class="container container--padding-off">
+        <div class="catalog__inner">
+
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

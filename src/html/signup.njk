@@ -1,24 +1,45 @@
 {% extends 'layouts/application.njk' %}
-{% from 'macros/helpers.html' import spriteForLink,sprite %}
 
 
 {% block content %}
 
-<div class="page__wrapper page__wrapper--favorite-page">
+<div class="page__wrapper page__wrapper--auth-page">
 
-  {% include 'components/_header-2.njk' %}
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Личный кабинет</h1>
+
+      <div class="header__description">
+        <a href="signin.html" class="link-standart">Вход</a>
+        <a href="signup.html" class="link-standart">Регистрация</a>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
 
 
   <main class="main">
 
 
-    <section class="signup-form form-wrapper section-wrapper section-wrapper--gray-bg">
-      <h2 class="section-title">Вход</h2>
+    <section class="signup-form form-wrapper section-wrapper">
+      <h2 class="section-title">Регистрация</h2>
 
       <div class="container">
         {% import 'components/_forms.njk' as forms %}
 
-        {{ forms.registration() }}
+        {{ forms.signup() }}
       </div>
     </section>
 

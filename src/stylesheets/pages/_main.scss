@@ -27,7 +27,7 @@
 //Mods
   .header--with-bg {
     background-image: url(../images/general/main-bg--mobile.jpg);
-    @media (--xl) {
+    @media (--m) {
       background-image: url(../images/general/main-bg--desktop.jpg);
     }
   }

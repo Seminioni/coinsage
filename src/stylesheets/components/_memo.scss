@@ -2,7 +2,7 @@
 .memo {
   display: inline-block;
   font-size: 0;
-  @media (--xl) {
+  @media (--m) {
     margin-left: 18px;
   }
 
@@ -14,7 +14,7 @@
 .memo__star {
   @include rhythm(18,18);
   display: inline;
-  @media (--xl) {
+  @media (--m) {
     display: none;
   }
 }
@@ -23,7 +23,7 @@
   @include rhythm(12,12)
   color: var(--gray4);
   display: none;
-  @media (--xl) {
+  @media (--m) {
     display: inline;
   }
 }
@@ -31,7 +31,8 @@
 
 //Mods
 .memo--alone {
-  @media (--xl) {
+  display: block;
+  @media (--m) {
     display: none;
   }
   .memo__text {

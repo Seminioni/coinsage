@@ -2,6 +2,7 @@
 
 @import-normalize;
 @import 'utils/_resets';
+@import "choices";
 @import 'utils/_vars';
 @import 'utils/_mixins';
 @import 'utils/_library';
@@ -246,8 +247,11 @@ body {
 @import 'components/_modal';
 @import 'components/_tabs';
 @import 'components/_sales-rate';
+@import 'components/_select';
 
 @import 'pages/_main';
 @import 'pages/_lib';
 @import 'pages/_favorite';
 @import 'pages/_catalogItemInner';
+@import 'pages/_auth';
+@import 'pages/_catalog';

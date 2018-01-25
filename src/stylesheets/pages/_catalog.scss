@@ -1,0 +1,39 @@
+.page__wrapper.page__wrapper--catalog-page {
+  //Core styles
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+  .catalog {
+    padding-bottom: 40px;
+    @media (--m) {
+      padding-bottom: 70px;
+    }
+  }
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    background-image: url(../images/general/catalog-bg--mobile.jpg);
+    @media (--m) {
+      background-image: url(../images/general/catalog-bg--desktop.jpg);
+    }
+  }
+  //Mods
+
+
+
+  //End mods
+
+  //Media queries
+
+    //Core styles
+
+    //End core styles
+
+    //Mods
+
+    //End mods
+  //End media queries
+}

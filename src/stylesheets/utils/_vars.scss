@@ -15,6 +15,6 @@
   --white: #fff;
 }
 
-@custom-media --sm (width <= 500px);
 @custom-media --m (min-width: 769px);
 @custom-media --xl (min-width: 1025px);
+@custom-media --xl-sm (width <= 1025px);

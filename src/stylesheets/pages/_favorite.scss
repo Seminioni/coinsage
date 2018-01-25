@@ -34,7 +34,7 @@
   //Mods
     .header--with-bg {
       background-image: url(../images/general/favorite-bg--mobile.jpg);
-      @media (--xl) {
+      @media (--m) {
         background-image: url(../images/general/favorite-bg--desktop.jpg);
       }
     }

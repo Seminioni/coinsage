@@ -15,6 +15,14 @@ module.exports = {
     }
   },
 
+  stylesheets: {
+    sass: {
+      includePaths: [
+        "./node_modules/choices.js/assets/styles/scss/",
+      ]
+    },
+  },
+
   browserSync: {
     server: {
       // should match `dest` in

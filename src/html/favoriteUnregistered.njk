@@ -6,7 +6,27 @@
 
 <div class="page__wrapper page__wrapper--favorite-page">
 
-  {% include 'components/_header-2.njk' %}
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Избранное</h1>
+
+      <p class="header__description">
+        <a href="" class="link-standart link-standart--inside-text">Зарегистрируйтесь</a>, чтобы сохранить товары в личном кабинете
+      </p>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
 
   <main class="main">
 

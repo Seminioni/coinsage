@@ -67,8 +67,15 @@ img {
 }
 
 .link-standart {
+  display: block;
   &:hover {
     text-decoration: none;
+  }
+  & + .link-standart {
+    margin-top: 5px;
+  }
+  &--inside-text {
+    display: inline-block;
   }
 }
 
