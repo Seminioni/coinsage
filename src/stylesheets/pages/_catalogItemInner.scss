@@ -4,6 +4,7 @@
   .header {
     min-height: auto;
     padding-top: 0;
+    padding-bottom: 0;
     @media (--xl) {
       padding-top: 65px;
     }
@@ -28,7 +29,7 @@
     }
     .catalog-item__slider-container {
       position: relative;
-      margin-bottom: 55px;
+      margin-bottom: 25px;
       @media (--xl) {
         margin-bottom: 0;
       }
@@ -232,6 +233,14 @@
       }
     }
 
+  }
+
+  .in-row {
+    padding-bottom: 30px;
+    @media (--xl) {
+      padding-bottom: 80px;
+      padding-top: 80px;
+    }
   }
 
   .similar-coins {

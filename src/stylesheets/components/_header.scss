@@ -2,6 +2,7 @@
 .header {
   min-height: calc(100vh - 65px);
   padding-top: 115px;
+  padding-bottom: 40px;
   @media (--xl) {
     padding-top: 160px;
   }

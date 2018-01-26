@@ -188,11 +188,9 @@
   }
 }
 
-.register-form {
-  // padding-bottom: 30px;
-  @media (--xl) {
-    // padding-bottom: 90px;
-  }
+
+.form--send-coins {
+  max-width: unset;
 }
 
 .register-form__success-container {

@@ -3,10 +3,20 @@ select {
   display: none;
 }
 .select {
-  max-width: 135px;
+  max-width: 155px;
   margin: auto;
+  @media (--m) {
+    max-width: 165px;
+  }
   & + .select {
     margin-top: 15px;
+    @media (--m) {
+      margin-top: 0;
+      margin-left: 1.5vw;
+    }
+    @media (--xl) {
+      margin-left: 2.5vw;
+    }
   }
   .choices__inner {
     padding: 1.5px 7.5px 3.75px;
@@ -14,6 +24,15 @@ select {
     height: 32px;
     min-height: auto;
     border: 1px solid var(--black);
+    max-width: 165px;
+    @media (--m) {
+      padding-left: 20px;
+      padding-right: 5vw;
+      text-align: left;
+    }
+    @media (--xl) {
+      padding-right: 78px;
+    }
     .choices__item {
       color: var(--white);
       text-align: left;
@@ -39,6 +58,7 @@ select {
   }
   .choices__item {
     color: var(--gray5);
+
     &.is-highlighted {
       color: var(--gold);
       background-color: var(--white);
@@ -54,20 +74,14 @@ select {
     border-radius: 10px;
     background-color: #ffffff;
     transform: translateY(10px);
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: -9px;
-    //   left: 50%;
-    //   z-index: 111111;
-    //   width: 19px;
-    //   background-color: red;
-    //   height: 10px;
-    //   background-image: url('../images/content/icon-top-arrow.png');
-    //   background-repeat: no-repeat;
-    //   background-size: contain;
-    //   transform: translateX(-50%);
-    // }
+    .choices__item--selectable {
+      padding-right: 10px;
+
+      &:after {
+        content: '';
+        display: none;
+      }
+    }
   }
 }
 .select--white {

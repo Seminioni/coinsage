@@ -5,6 +5,14 @@
     background-color: var(--gray1);
   }
 
+
+  .header__container {
+    .header__container {
+      @media (--m) {
+        max-width: unset;
+      }
+    }
+  }
   .catalog {
     padding-bottom: 40px;
     @media (--m) {

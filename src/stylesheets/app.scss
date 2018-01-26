@@ -1,13 +1,13 @@
 // App styles, imports etc...
 
 @import-normalize;
-@import 'utils/_resets';
+@import "utils/_resets";
 @import "choices";
-@import 'utils/_vars';
-@import 'utils/_mixins';
-@import 'utils/_library';
-@import 'utils/_radiobuttons';
-@import 'utils/_buttons';
+@import "utils/_vars";
+@import "utils/_mixins";
+@import "utils/_library";
+@import "utils/_radiobuttons";
+@import "utils/_buttons";
 
 html,
 body {
@@ -20,7 +20,6 @@ html {
 }
 
 body {
-
   &.menu-is-open {
     overflow: hidden;
   }
@@ -78,8 +77,26 @@ body {
       @include rhythm(30,30);
     }
   }
+}
 
+.section-wrapper--bdt {
+  padding-top: 30px;
+  @media (--xl) {
+    padding-top: 50px;
+  }
+}
 
+.section-wrapper--bdb {
+  padding-bottom: 30px;
+  @media (--xl) {
+    padding-bottom: 50px;
+  }
+}
+
+.section-wrapper--bdb-no-on-mobile {
+  @media (--xl) {
+    padding-bottom: 50px;
+  }
 }
 
 .section-wrapper--gray-bg {
@@ -143,7 +160,6 @@ body {
   svg {
     @include goldOnHover(icon);
   }
-
 }
 
 .alone-component {
@@ -184,28 +200,49 @@ body {
 }
 
 .in-row {
-  padding-bottom: 30px;
-  @media (--xl) {
-    padding-bottom: 80px;
-    padding-top: 80px;
-    &--three {
-      .in-row__item{
-        max-width: 330px;
-      }
-    }
-    .in-row__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  &--three {
     .in-row__item {
       &:not(:last-of-type) {
-        margin-bottom: 0;
+        margin-bottom: 30px;
+      }
+    }
+    @media (--m) {
+      .in-row__item {
+        flex-basis: calc(100% / 3);
+        &:not(:last-of-type) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  &--one-half-width {
+    .in-row__item {
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+    @media (--m) {
+      .in-row__item {
+        flex-basis: 50%;
+        &:nth-last-child(-n+2) {
+          margin-top: 50px;
+        }
+      }
+      .in-row__text {
+        max-width: 264px;
       }
     }
   }
 }
 
+.in-row__inner {
+  @media (--m) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
 
 .in-row__img {
   width: 30px;
@@ -216,42 +253,49 @@ body {
 
 .in-row__item {
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  &:not(:last-of-type) {
-    margin-bottom: 30px;
+  @media (--m) {
+    padding-right: 10px;
   }
 }
 
 .in-row__text {
   @extend .f-weight-light;
   @include rhythm(14,14);
+  max-width: 500px;
+  @media (--m) {
+    max-width: unset;
+  }
 }
 
+@import "utils/_GUI";
+@import "utils/form/_index";
 
-@import 'utils/_GUI';
-@import 'utils/form/_index';
+@import "components/_header";
+@import "components/_footer";
+@import "components/_burger";
+@import "components/_mobile-menu";
+@import "components/_navigation";
+@import "components/_lang-switcher";
+@import "components/_news";
+@import "components/_catalog";
+@import "components/_stepper";
+@import "components/_tooltip";
+@import "components/_memo";
+@import "components/_catalog-carousel";
+@import "components/_modal";
+@import "components/_tabs";
+@import "components/_sales-rate";
+@import "components/_select";
+@import "components/_filter";
+@import "components/_pagination";
 
-@import 'components/_header';
-@import 'components/_footer';
-@import 'components/_burger';
-@import 'components/_mobile-menu';
-@import 'components/_navigation';
-@import 'components/_lang-switcher';
-@import 'components/_news';
-@import 'components/_catalog';
-@import 'components/_stepper';
-@import 'components/_tooltip';
-@import 'components/_memo';
-@import 'components/_catalog-carousel';
-@import 'components/_modal';
-@import 'components/_tabs';
-@import 'components/_sales-rate';
-@import 'components/_select';
-
-@import 'pages/_main';
-@import 'pages/_lib';
-@import 'pages/_favorite';
-@import 'pages/_catalogItemInner';
-@import 'pages/_auth';
-@import 'pages/_catalog';
+@import "pages/_main";
+@import "pages/_lib";
+@import "pages/_favorite";
+@import "pages/_catalogItemInner";
+@import "pages/_auth";
+@import "pages/_catalog";
+@import "pages/_contacts";
+@import "pages/_purchase";

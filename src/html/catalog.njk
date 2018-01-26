@@ -18,50 +18,56 @@
       <h1 class="header__title">Каталог</h1>
 
       <div class="header__description">
-        {# <p>фильтры</p> #}
-
-        <div class="select select--white">
-          <select id="select-money">
-            <option value="gold">Монета</option>
-            <option value="argentum">Серебро</option>
-            <option value="platina">Платина</option>
-            <option value="metal">Металл</option>
-          </select>
-        </div>
-        <div class="select select--white">
-          <select id="select-country">
-            <option value="gold">Россия</option>
-            <option value="argentum">Серебро</option>
-            <option value="platina">Платина</option>
-            <option value="metal">Металл</option>
-          </select>
-        </div>
-        <div class="select select--white">
-          <select id="select-year">
-            <option value="gold">1976</option>
-            <option value="argentum">Серебро</option>
-            <option value="platina">Платина</option>
-            <option value="metal">Металл</option>
-          </select>
-        </div>
-        <div class="select select--white">
-          <select id="select-price">
-            <option value="gold">Золото</option>
-            <option value="argentum">Серебро</option>
-            <option value="platina">Платина</option>
-            <option value="metal">Металл</option>
-          </select>
-        </div>
-        <div class="select select--white">
-          <select id="select-material">
-            <option value="gold">Золото</option>
-            <option value="argentum">Серебро</option>
-            <option value="platina">Платина</option>
-            <option value="metal">Металл</option>
-          </select>
-        </div>
 
 
+        <form data-controller="filters" class="filters">
+          <a href="#" data-action="filters#onOpenButtonClick" class="link-standart filters__button">фильтры</a>
+          <a href="#" data-action="filters#onOpenButtonClick" class="icon-cross"></a>
+          <div data-target="filters.inner" class="filters__inner">
+            <div class="select filter select--white">
+              <select id="select-money">
+                <option value="gold">Монета</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-country">
+                <option value="gold">Россия</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-year">
+                <option value="gold">1976</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-price">
+                <option value="gold">Золото</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-material">
+                <option value="gold">Золото</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+
+          </div>
+           <a href="#" data-action="filters#onResetButtonClick" class="link-standart reset-button">Сбросить</a>
+        </form>
 
 
       </div>
@@ -77,7 +83,7 @@
   <main class="main">
 
 
-    <div class="catalog section-wrapper">
+    <section class="catalog section-wrapper">
       <div class="container container--padding-off">
         <div class="catalog__inner">
 
@@ -91,8 +97,11 @@
           {% include 'components/_catalogItem.njk' %}
 
         </div>
+        {% include 'components/_pagination.njk' %}
+
       </div>
-    </div>
+    </section>
+
 
 
   </main>
