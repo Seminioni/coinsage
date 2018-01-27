@@ -11,7 +11,7 @@
 
 html,
 body {
-  font-family: var(--Lato);
+  font-family: var(--Lato), Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
 
@@ -199,75 +199,6 @@ body {
   border-bottom: 1px solid var(--gold);
 }
 
-.in-row {
-  &--three {
-    .in-row__item {
-      &:not(:last-of-type) {
-        margin-bottom: 30px;
-      }
-    }
-    @media (--m) {
-      .in-row__item {
-        flex-basis: calc(100% / 3);
-        &:not(:last-of-type) {
-          margin-bottom: 0px;
-        }
-      }
-    }
-  }
-  &--one-half-width {
-    .in-row__item {
-      &:not(:last-of-type) {
-        margin-bottom: 30px;
-      }
-    }
-    @media (--m) {
-      .in-row__item {
-        flex-basis: 50%;
-        &:nth-last-child(-n+2) {
-          margin-top: 50px;
-        }
-      }
-      .in-row__text {
-        max-width: 264px;
-      }
-    }
-  }
-}
-
-.in-row__inner {
-  @media (--m) {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-
-.in-row__img {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  margin-right: 25px;
-}
-
-.in-row__item {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  @media (--m) {
-    padding-right: 10px;
-  }
-}
-
-.in-row__text {
-  @extend .f-weight-light;
-  @include rhythm(14,14);
-  max-width: 500px;
-  @media (--m) {
-    max-width: unset;
-  }
-}
 
 @import "utils/_GUI";
 @import "utils/form/_index";
@@ -285,11 +216,12 @@ body {
 @import "components/_memo";
 @import "components/_catalog-carousel";
 @import "components/_modal";
-@import "components/_tabs";s
+@import "components/_tabs";
 @import "components/_sales-rate";
 @import "components/_select";
 @import "components/_filter";
 @import "components/_pagination";
+@import "components/_in-row";
 
 @import "pages/_main";
 @import "pages/_lib";
