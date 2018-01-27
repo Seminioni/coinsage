@@ -1,0 +1,38 @@
+//Core styles
+.pagination {
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (--m) {
+    margin-top: 45px;
+  }
+}
+
+.pagintaion__inner {
+  display: inline-flex;
+}
+
+.pagination__link {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  @extend .f-weight-light;
+  @include rhythm(13,30);
+}
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

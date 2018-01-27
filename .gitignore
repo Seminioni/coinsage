@@ -65,4 +65,3 @@ typings/
 dist
 .cache
 src/**/.DS_Store
-src/stylesheets/components
