@@ -71,7 +71,14 @@
 //End core styles
 
 //Mods
-
+.in-row__img--big {
+  width: 45px;
+  height: 45px;
+  margin-right: 40px;
+  @media (--m) {
+    margin-right: 50px;
+  }
+}
 //End mods
 
 //Media queries

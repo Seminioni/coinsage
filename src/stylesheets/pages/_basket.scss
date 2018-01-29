@@ -1,0 +1,45 @@
+.page__wrapper.page__wrapper--basket-page {
+//Core styles
+
+  .radiobuttons {
+    display: inline-flex;
+
+    .radiobtn {
+      & + .radiobtn {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    background-image: url(../images/general/basket-bg--mobile.jpg);
+    @media (--m) {
+      background-image: url(../images/general/basket-bg--desktop.jpg);
+    }
+  }
+
+
+//End Mods
+
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+//End media queries
+}

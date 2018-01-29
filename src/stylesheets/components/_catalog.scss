@@ -10,14 +10,13 @@
   min-height: 275px;
   margin-bottom: 50px;
   position: relative;
-  &:nth-last-child(-n+4),
+  // &:nth-last-child(-n+4),
   &:nth-last-child(-n+2) {
     margin-bottom: 0;
   }
   &:nth-child(even) {
     border-left: 1px solid var(--gray6);
   }
-
   @media (--xl-sm) {
     .catalog-item {
       padding-left: 15px;
@@ -45,6 +44,10 @@
         visibility: visible;
         opacity: 1;
       }
+    }
+
+    &:nth-last-child(-n+4) {
+      margin-bottom: 0;
     }
   }
   @media (--xl) {

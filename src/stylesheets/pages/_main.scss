@@ -10,7 +10,9 @@
   }
   .header {
     padding-top: 55px;
-    @media (--xl) {
+    min-height: calc(100vh - 65px);
+    @media (--m) {
+      min-height: 430px;
       padding-top: 130px;
     }
 

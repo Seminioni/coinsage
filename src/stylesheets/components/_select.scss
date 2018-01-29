@@ -34,7 +34,7 @@ select {
       padding-right: 78px;
     }
     .choices__item {
-      color: var(--white);
+      color: var(--black);
       text-align: left;
     }
   }
@@ -88,6 +88,9 @@ select {
   .choices__inner {
     background-color: transparent;
     border-color: var(--white);
+    .choices__item {
+      color: var(--white);
+    }
   }
 }
 //End mods

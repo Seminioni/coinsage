@@ -1,6 +1,5 @@
 //Core styles
 .form-wrapper {
-  padding-bottom: 30px;
   .section-title {
     margin-bottom: 40px;
   }
@@ -40,6 +39,33 @@
   input[type='submit'] {
     margin-top: 15px;
   }
+
+  .input__image {
+    background-image: url(../images/content/icon-download-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    display: block;
+  }
+
+  .textarea-wrapper {
+    textarea {
+      border: 1px solid var(--gray5);
+      padding: 10px;
+      display: block;
+      resize: vertical;
+      color: var(--black);
+      min-height: 110px;
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+      @include rhythm(14,14);
+    }
+  }
+
 
 }
 
@@ -228,6 +254,70 @@
   @media (--m) {
     padding-bottom: 0;
   }
+}
+
+.purchase-reg-form {
+  .filters {
+    .filters__inner {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      flex-direction: column;
+      @media (--m) {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+    .filter {
+      margin: unset;
+      max-width: 206px;
+      & + .filter {
+        margin-top: 30px;
+        @media (--m) {
+          margin-top: 0;
+          margin-left: 130px;
+        }
+      }
+    }
+
+  }
+  .select {
+    .choices__inner {
+      max-width: 206px;
+    }
+    .choices__list--dropdown {
+      padding: 35px;
+      padding-right: 15px;
+      border: 0;
+      border-radius: 23px;
+      .choices__item {
+        padding-top: 0;
+        padding-bottom: 0;
+        &.is-highlighted {
+          color: var(--black);
+        }
+      }
+      .choices__list {
+        margin-top: 10px;
+      }
+      .choices__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:focus {
+          border: 0;
+          border-bottom: 1px solid rgba(0, 0, 0, .12);
+        }
+      }
+      .choices__heading {
+        padding: 0;
+        margin-bottom: 10px;
+        border: 0;
+      }
+    }
+  }
+
 }
 
 //End mods

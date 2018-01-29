@@ -12,21 +12,27 @@ export default class Filters extends Controller {
     this.initDropdowns(document.querySelectorAll(".select select"));
 
     this.getDropdowns().forEach(dropdown => {
-      dropdown.passedElement.addEventListener("showDropdown", event => {
-        const dropdown = event.target.parentNode.nextSibling;
+      // dropdown.passedElement.addEventListener("showDropdown", event => {
+      //   const dropdown = event.target.parentNode.nextSibling;
+      //   const select = findAncestor(event.target.parentNode, 'select');
 
-        if (!isElementInViewport(dropdown)) {
-          const { top, bottom } = dropdown.getBoundingClientRect();
-          doScrolling(bottom - top, 500);
-        }
-      });
+      //   if (!isElementInViewport(dropdown)) {
+      //     const {y, height } = select.getBoundingClientRect();
+
+      //     doScrolling(y - height - 30, 600);
+      //   }
+      // });
     });
   }
   initDropdowns(collection) {
     this.dropdowns = Array.from(collection).map(el => {
       return new Dropdown(el, {
-        searchEnabled: false,
+        placeholder: true,
+        placeholderValue: 'Введите город',
         shouldSort: false,
+        searchEnabled: true,
+        noResultsText: 'Ничего не найдено',
+        resetScrollPosition: false,
       });
     });
   }

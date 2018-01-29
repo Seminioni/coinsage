@@ -62,12 +62,8 @@ body {
 
 .section-wrapper {
   border-top: 1px solid transparent;
-  padding-top: 30px;
-  @media (--xl) {
-    padding-top: 50px;
-  }
   .section-title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
     @include rhythm(20,20);
     color: var(--gold);
@@ -79,21 +75,21 @@ body {
   }
 }
 
-.section-wrapper--bdt {
+.section-wrapper--pdt {
   padding-top: 30px;
   @media (--xl) {
     padding-top: 50px;
   }
 }
 
-.section-wrapper--bdb {
+.section-wrapper--pdb {
   padding-bottom: 30px;
   @media (--xl) {
     padding-bottom: 50px;
   }
 }
 
-.section-wrapper--bdb-no-on-mobile {
+.section-wrapper--pdb-no-on-mobile {
   @media (--xl) {
     padding-bottom: 50px;
   }
@@ -199,6 +195,15 @@ body {
   border-bottom: 1px solid var(--gold);
 }
 
+.file-uploader {
+  border: 1px solid #000;
+  border-style: dashed;
+}
+
+.file-uploader__inner {
+  min-height: 100px;
+ }
+
 
 @import "utils/_GUI";
 @import "utils/form/_index";
@@ -231,3 +236,5 @@ body {
 @import "pages/_catalog";
 @import "pages/_contacts";
 @import "pages/_purchase";
+@import "pages/_aboutus";
+@import "pages/_basket";
