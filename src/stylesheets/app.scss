@@ -89,6 +89,13 @@ body {
   }
 }
 
+.section-wrapper--pdt-no-on-desktop {
+  padding-top: 30px;
+  @media (--m) {
+    padding-top: 0;
+  }
+}
+
 .section-wrapper--pdb-no-on-mobile {
   @media (--xl) {
     padding-bottom: 50px;
@@ -227,6 +234,7 @@ body {
 @import "components/_filter";
 @import "components/_pagination";
 @import "components/_in-row";
+@import "components/_basket";
 
 @import "pages/_main";
 @import "pages/_lib";
@@ -238,3 +246,4 @@ body {
 @import "pages/_purchase";
 @import "pages/_aboutus";
 @import "pages/_basket";
+@import "pages/_personalCabinet";

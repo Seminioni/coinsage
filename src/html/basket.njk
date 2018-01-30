@@ -30,10 +30,17 @@
 
   <main class="main">
 
-    <section class="abilities section-wrapper section-wrapper--pdb section-wrapper--pdt">
+    <section class="basket section-wrapper section-wrapper--pdb section-wrapper--pdt">
       <h2 class="section-title">Корзина</h2>
 
       <div class="container">
+
+        {% include 'components/_basket-item.njk' %}
+
+        <p class="basket__totals">
+          Итого:
+          <span>559 496 ₽</span>
+        </p>
 
       </div>
 

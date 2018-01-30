@@ -3,6 +3,7 @@
 :root {
   --black: #000000;
   --gold: #B49740;
+  --yellow: #a48632;
   --gray1: #F7F7F7;
   --gray2: #87970E;
   --gray3: #070101;
@@ -15,6 +16,7 @@
   --white: #fff;
 }
 
+@custom-media --s (width <= 769px);
 @custom-media --m (min-width: 769px);
 @custom-media --xl (min-width: 1025px);
 @custom-media --xl-sm (width <= 1025px);

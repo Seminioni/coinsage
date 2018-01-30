@@ -36,9 +36,6 @@
     }
   }
 
-  input[type='submit'] {
-    margin-top: 15px;
-  }
 
   .input__image {
     background-image: url(../images/content/icon-download-btn.svg);
@@ -66,12 +63,40 @@
     }
   }
 
+  .radiobtns {
+    display: flex;
+
+    .radiobtn {
+      & + .radiobtn {
+        margin-left: 30px;
+      }
+    }
+
+  }
+
+  .radiobtns--vertical {
+    flex-direction: column;
+    margin-bottom: 20px;
+    .radiobtn {
+      & + .radiobtn {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+
 
 }
 
 .form__field {
   & + .form__field {
     margin-top: 25px;
+  }
+  & + .form__field--button {
+    margin-top: 45px;
+  }
+  & + .form__field--group {
+    margin-top: 35px;
   }
 }
 
@@ -80,6 +105,33 @@
   display: inline-block;
   white-space: nowrap;
   margin-bottom: 20px;
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__field-subHeading {
+  @extend .form__field-heading;
+  @extend .f-weight-light;
+  @include rhythm(16,16);
+}
+
+.form__field-heading--group-leader {
+  @include rhythm(18,18);
+}
+
+.form__field--simple-text-inside {
+  .form__field-subHeading {
+    margin-bottom: 10px;
+  }
+  .form__text {
+    @include rhythm(13,13);
+    @extend .f-weight-light;
+    color: #656565;
+    & + .form__text {
+      margin-top: 5px;
+    }
+  }
 }
 
 //End core styles
@@ -87,7 +139,6 @@
 //Mods
 .form--search,
 .form--subscribtion {
-  // max-width: 690px;
   input[type='text'],
   input[type='email'],
   input[type='password'],
@@ -107,6 +158,16 @@
 
   }
 }
+
+.form--error {
+  .attention-memo {
+    color: var(--red);
+    @include rhythm(14,14);
+    @extend .f-weight-normal;
+    display: inline-block;
+  }
+}
+
 .form--search {
   label {
     display: inline-flex;
@@ -203,16 +264,23 @@
 
 .form__field--centered {
   text-align: center;
-  @media (--xl) {
+  @media (--m) {
     text-align: left;
   }
 }
 
 .form__field--one-half-width {
-  @media (--xl) {
-    max-width: 460px;
+  @media (--m) {
+    max-width: 50%;
   }
 }
+
+.form__field--three-quartes-width {
+  @media (--m) {
+    max-width: 75%;
+  }
+}
+
 
 
 .form--send-coins {
@@ -270,7 +338,7 @@
     }
     .filter {
       margin: unset;
-      max-width: 206px;
+      max-width: 263px;
       & + .filter {
         margin-top: 30px;
         @media (--m) {
@@ -283,7 +351,7 @@
   }
   .select {
     .choices__inner {
-      max-width: 206px;
+      max-width: 263px;
     }
     .choices__list--dropdown {
       padding: 35px;
@@ -304,6 +372,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        padding-left: 20px;
 
         &:focus {
           border: 0;
@@ -319,6 +388,7 @@
   }
 
 }
+
 
 //End mods
 

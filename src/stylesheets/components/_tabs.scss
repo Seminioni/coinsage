@@ -112,19 +112,25 @@
 
   @media (--m) {
     display: inline-block;
-    padding: 15px 60px;
+    padding: 15px 5vw;
   }
+}
+
+div[data-tabs-content] {
+  position: relative;
 }
 
 .tabs-pane {
   visibility: hidden;
   opacity: 0;
   height: 0;
+  overflow: hidden;
   outline: 0;
   &--active {
     visibility: visible;
     opacity: 1;
     height: 100%;
+    overflow: visible;
   }
 }
 
@@ -137,15 +143,6 @@
     display: flex;
   }
 }
-
-// .tabs__mobile-heading--active {
-//   &:before {
-
-//   }
-//   &:after {
-
-//   }
-// }
 
 @media (--m) {
   .tabs--upside-down {
