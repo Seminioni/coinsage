@@ -15,6 +15,11 @@ export class SiemaWithDots extends Siema {
   }
 
   addDots() {
+    const pagination = document.querySelector('.catalog-item__pagination');
+
+    if (pagination) {
+      pagination.remove()
+    }
     // create a contnier for all dots
     // add a class 'dots' for styling reason
     this.dots = document.createElement('div');
