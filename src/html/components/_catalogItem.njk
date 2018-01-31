@@ -35,13 +35,15 @@
       <a href="#" class="icon-cross"></a>
   </div>
   <div class="catalog-on-hover-item">
-    <a href="catalogItemInner.html" class="catalog-item__heading">США 20 долларов 1905 </a>
-    <strong class="catalog-item__price catalog-item__price--new-price">59 496 ₽</strong>
-    <strong class="catalog-item__price catalog-item__price--old-price">59 496 ₽</strong>
-    <i class="catalog-item__rare">
-      <span class="icon-text">редкая монета</span>
-      {{ sprite('icon-diamond') }}
-    </i>
+    <a class="catalog-on-hover-item__top-link" href="catalogItemInner.html">
+      <h3 class="catalog-item__heading">США 20 долларов 1905 </h3>
+      <strong class="catalog-item__price catalog-item__price--new-price">59 496 ₽</strong>
+      <strong class="catalog-item__price catalog-item__price--old-price">59 496 ₽</strong>
+      <i class="catalog-item__rare">
+        <span class="icon-text">редкая монета</span>
+        {{ sprite('icon-diamond') }}
+      </i>
+    </a>
     <div data-controller="coin-slider" class="catalog-item__slider-container">
       <div data-target="coin-slider.slider" class="catalog-item__slider catalog-item__img">
           <img src="../images/content/content-3.png" alt="">

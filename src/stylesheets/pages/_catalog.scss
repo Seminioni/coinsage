@@ -5,6 +5,13 @@
     background-color: var(--gray1);
   }
 
+  .pagination {
+    margin-top: 15px;
+    @media (--m) {
+      margin-top: 45px;
+    }
+  }
+
 
   .header__container {
     .header__container {

@@ -60,6 +60,14 @@ body {
   }
 }
 
+.page__wrapper--black-content {
+  .section-wrapper {
+    .section-title {
+      color: var(--black);
+    }
+  }
+}
+
 .section-wrapper {
   border-top: 1px solid transparent;
   .section-title {
@@ -214,6 +222,7 @@ body {
 
 @import "utils/_GUI";
 @import "utils/form/_index";
+@import "utils/_links";
 
 @import "components/_header";
 @import "components/_footer";
@@ -247,3 +256,4 @@ body {
 @import "pages/_aboutus";
 @import "pages/_basket";
 @import "pages/_personalCabinet";
+@import "pages/_news";

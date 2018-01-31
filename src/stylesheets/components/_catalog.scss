@@ -134,6 +134,13 @@
   }
 }
 
+.catalog-on-hover-item__top-link {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+
 .catalog-item__pagination {
   position: absolute;
   bottom: -25px;
@@ -200,7 +207,6 @@
 
 .catalog-item__price {
   display: block;
-  max-width: 70%;
   @include rhythm(18,18);
   text-transform: uppercase;
   & + .catalog-item__price {
@@ -234,8 +240,7 @@
   position: absolute;
   bottom: 5px;
   right: 10px;
-
-
+  z-index: 10;
   @media (--xl) {
     position: static;
   }

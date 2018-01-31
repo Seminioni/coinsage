@@ -90,6 +90,15 @@
     max-width: 125px;
   }
 
+  .fluid-component {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    @media (--m) {
+      padding-top: 110px;
+      padding-bottom: 125px;
+    }
+  }
+
   .footer {
     background-color: var(--gray1);
   }

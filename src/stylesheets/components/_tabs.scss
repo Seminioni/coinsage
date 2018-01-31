@@ -17,13 +17,13 @@
   max-width: 271px;
   @extend .f-weight-light;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: -9px;
     left: 50%;
     width: 19px;
     height: 10px;
-    background-image: url('../images/content/icon-top-arrow.png');
+    background-image: url("../images/content/icon-top-arrow.png");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateX(-50%);
@@ -49,7 +49,7 @@
   position: relative;
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 2px;
     right: -20px;
@@ -59,10 +59,10 @@
     transform-origin: 100% 0;
   }
   &:before {
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
   &:after {
-    transform: rotate(135deg)
+    transform: rotate(135deg);
   }
   @media (--m) {
     display: none;
@@ -88,13 +88,12 @@
   }
   @media (--m) {
     position: relative;
-
     &:hover {
       .tabs__link {
         &:after {
-          content: '';
+          content: "";
           position: absolute;
-          bottom: 0;
+          bottom: -1px;
           left: 50%;
           height: 1px;
           width: 100%;
@@ -109,10 +108,13 @@
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-
+  padding: 15px 6vw;
   @media (--m) {
     display: inline-block;
-    padding: 15px 5vw;
+    padding: 15px 40px;
+  }
+  @media (--xl) {
+    padding: 15px 60px;
   }
 }
 
@@ -158,7 +160,7 @@ div[data-tabs-content] {
       &:hover {
         .tabs__link {
           &:after {
-            top: -1px
+            top: -1px;
           }
         }
       }
@@ -169,27 +171,26 @@ div[data-tabs-content] {
   color: var(--gold);
   @media (--m) {
     &:after {
-      content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        height: 1px;
-        width: 100%;
-        transform: translateX(-50%);
-        background: var(--gold);
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      height: 1px;
+      width: 100%;
+      transform: translateX(-50%);
+      background: var(--gold);
     }
   }
 }
 
-
 //End mods
 
 //Media queries
-  //Core styles
+//Core styles
 
-  //End core styles
+//End core styles
 
-  //Mods
+//Mods
 
-  //End mods
+//End mods
 //End media queries
