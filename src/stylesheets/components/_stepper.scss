@@ -5,6 +5,7 @@
 
 .stepper__side {
   height: 30px;
+  user-select: none;
   &:hover {
     cursor: pointer;
   }

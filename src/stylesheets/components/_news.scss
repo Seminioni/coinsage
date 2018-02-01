@@ -16,7 +16,7 @@
   align-content: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-  @media (--xl) {
+  @media (--m) {
     flex-direction: row;
   }
 }

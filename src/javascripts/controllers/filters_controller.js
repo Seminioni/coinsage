@@ -1,6 +1,7 @@
 import { Controller } from "stimulus";
 import { toggleClass, doScrolling, isElementInViewport } from "../utils";
 import Dropdown from "../components/dropdown/index.js";
+import { sSize } from "utils/constants.js";
 
 function findAncestor(el, cls) {
   while ((el = el.parentElement) && !el.classList.contains(cls));
@@ -11,18 +12,6 @@ export default class Filters extends Controller {
   initialize() {
     this.initDropdowns(document.querySelectorAll(".select select"));
 
-    this.getDropdowns().forEach(dropdown => {
-      // dropdown.passedElement.addEventListener("showDropdown", event => {
-      //   const dropdown = event.target.parentNode.nextSibling;
-      //   const select = findAncestor(event.target.parentNode, 'select');
-
-      //   if (!isElementInViewport(dropdown)) {
-      //     const {y, height } = select.getBoundingClientRect();
-
-      //     doScrolling(y - height - 30, 600);
-      //   }
-      // });
-    });
   }
   initDropdowns(collection) {
     this.dropdowns = Array.from(collection).map(el => {
@@ -48,7 +37,7 @@ export default class Filters extends Controller {
 
   onOpenButtonClick(e) {
     e.preventDefault();
-    if (window.matchMedia("screen and (max-width: 768px)").matches) {
+    if (window.matchMedia(sSize).matches) {
       const header = findAncestor(this.element, "header");
       toggleClass(header, "filters--is-open");
     }

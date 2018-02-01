@@ -1,5 +1,6 @@
 import { Controller } from "stimulus";
 import initSiema from "components/slider/index.js";
+import { sSize } from "utils/constants.js";
 
 export default class CatalogCarousel extends Controller {
   initialize() {
@@ -28,7 +29,7 @@ export default class CatalogCarousel extends Controller {
     });
 
 
-    if (window.matchMedia("screen and (max-width: 767px)").matches) {
+    if (window.matchMedia(sSize).matches) {
       mySiema.destroy(true)
     }
   }

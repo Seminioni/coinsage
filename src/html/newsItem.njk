@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="page__wrapper page__wrapper--black-content page__wrapper--news-page">
+<div class="page__wrapper page__wrapper--black-content page__wrapper--news-page page__wrapper--news-item-page">
 
   <header data-controller="header" class="header header--with-bg">
 
@@ -75,10 +75,14 @@
 
         <section class="news-item-slider-wr">
           <div data-controller="news-item-slider" class="news-item-slider">
-            <img src="../images/content/content-11.jpg" alt="">
-            <img src="../images/content/content-11.jpg" alt="">
+            <div class="news-item-slider__item"><img src="../images/content/content-11.jpg" alt=""></div>
+            <div class="news-item-slider__item"><img src="../images/content/content-11.jpg" alt=""></div>
           </div>
         </section>
+
+        <time class="news-date">17.11.2017</time>
+
+        {% include 'components/_scrollTopBtn.njk' %}
 
       </div>
 

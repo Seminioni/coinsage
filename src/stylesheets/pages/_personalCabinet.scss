@@ -50,9 +50,11 @@
     }
   }
 
-  .basket__item-param--state {
-    display: inline-block;
-  }
+   #purchaces {
+     .basket__item-param--state {
+       display: inline-block;
+     }
+   }
 
   .footer {
     background-color: var(--gray1);

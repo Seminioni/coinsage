@@ -1,5 +1,6 @@
 import { Controller } from "stimulus";
 import initSiema from "components/slider/index.js";
+import { mSize } from "utils/constants.js";
 
 (function() {
   var throttle = function(type, name, obj) {
@@ -26,7 +27,7 @@ export default class CatalogItem extends Controller {
     this.inited = false;
 
     const onEvents = () => {
-      const condition = window.matchMedia("screen and (min-width: 767px)")
+      const condition = window.matchMedia(mSize)
       .matches;
 
       if (!condition && !this.inited) {
@@ -57,7 +58,7 @@ export default class CatalogItem extends Controller {
       threshold: 20,
       loop: true,
       onInit: function() {
-        this.addDots();
+        this.addDots(true);
         this.updateDots();
       },
       onChange: function() {

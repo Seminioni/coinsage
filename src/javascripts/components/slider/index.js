@@ -14,10 +14,10 @@ export class SiemaWithDots extends Siema {
     this.arrowRight.addEventListener('click', () => this.next())
   }
 
-  addDots() {
+  addDots(willResize = false) {
     const pagination = document.querySelector('.catalog-item__pagination');
 
-    if (pagination) {
+    if (pagination && willResize) {
       pagination.remove()
     }
     // create a contnier for all dots

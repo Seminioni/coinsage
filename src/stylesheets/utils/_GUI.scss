@@ -253,3 +253,15 @@ img {
     max-width: 555px;
   }
 }
+
+.payments-system {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  li {
+    flex-shrink: 0;
+    & + li {
+      margin-left: 30px;
+    }
+  }
+}
