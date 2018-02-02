@@ -1,0 +1,72 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--personal-cabinet-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Личный кабинет</h1>
+
+       <div class="header__description">
+         <p class="header__description-field">Константинов Константин</p>
+         <p class="header__description-field">constantin@gmail.com</p>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="section-wrapper section-wrapper--pdt-no-on-desktop">
+      <div class="tabs">
+
+          <div class="container">
+            <p class="tabs__mobile-heading">Мои заказы</p>
+            <ul class="tabs__inner">
+              <li class="tabs__item"><a href="personalCabinetMyOrders.html" class="link tabs__link">Мои заказы</a></li>
+              <li class="tabs__item"><a href="personalCabinetFavorites.html" class="link tabs__link">Избранное</a></li>
+              <li class="tabs__item"><a href="personalCabinetBasket.html" class="link tabs__link">Корзина</a></li>
+              <li class="tabs__item"><a href="personalCabinetPreferences.html" class="link tabs__link tabs__link--active">Настройки</a></li>
+            </ul>
+
+          </div>
+
+      </div>
+
+      <section id="preferences" class="preferences purchase-form form-wrapper section-wrapper section-wrapper--pdb">
+        <h2 class="section-title">Настройки</h2>
+
+        <div class="container">
+          {% import 'components/_forms.njk' as forms %}
+
+          {{ forms.preferences() }}
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}
