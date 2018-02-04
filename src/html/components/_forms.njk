@@ -185,8 +185,14 @@
       </label>
     </div>
     <div class="form__field form__field--one-half-width">
-      <div class="file-uploader" data-controller="file-uploader">
-        <div class="file-uploader__inner" data-target="file-uploader.uploader">
+      <div data-controller="file-uploader" class="file-uploader">
+        <label class="label" for="fileUploader">
+          <input data-target="file-uploader.fileInput" type="file" id="fileUploader" accept="image/*" multiple="true">
+          <div class="file-uploader__inner">
+            <span class="file-uploader__icon"></span>
+          </div>
+        </label>
+        <div data-target="file-uploader.uploads-list" class="file-uploader__uploads-list">
 
         </div>
       </div>

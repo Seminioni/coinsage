@@ -1,26 +1,33 @@
 import { Controller } from "stimulus";
-import Dropzone from "dropzone";
 
 export default class FileUploader extends Controller {
   initialize() {
-    var myDropzone = new Dropzone(this.targets.find("uploader"), {
-      url: "/file-upload",
-      paramName: "file",
-      createImageThumbnails: false,
-      // init: function() {
-      //   var submitButton = document.querySelector("#submit-all");
-      //   myDropzone = this; // closure
+    const inputElement = this.targets.find("fileInput");
 
-      //   submitButton.addEventListener("click", function() {
-      //     myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-      //   });
+    inputElement.addEventListener("change", (e) => {
+      this.target = e.target.files;
+      const fileNames = Array.from(e.target.files).map(obj => obj.name);
 
-      //   // You might want to show the submit button only when
-      //   // files are dropped here:
-      //   this.on("addedfile", function() {
-      //     // Show submit button here and/or inform user to click it.
-      //   });
-      // }
-    });
+      this.renderFileNames(fileNames, e.target.files);
+    }, false);
+  }
+
+  renderFileNames(names, kek) {
+    const uploadsList = this.targets.find('uploads-list');
+
+    function appendNames(array, i) {
+      if (array[i] === undefined) {
+        return;
+      }
+      const fileName = document.createElement('p')
+      fileName.classList.add('file-uploader__uploads-item')
+      fileName.innerText = array[i]
+      uploadsList.appendChild(fileName);
+
+      return appendNames(array, ++i);
+    }
+
+    appendNames(names, 0);
+
   }
 }

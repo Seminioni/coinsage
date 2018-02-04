@@ -211,13 +211,45 @@ body {
 }
 
 .file-uploader {
-  border: 1px solid #000;
-  border-style: dashed;
+  display: inline-flex;
+  input[type="file"] {
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
-.file-uploader__inner {
-  min-height: 100px;
- }
+.file-uploader__icon {
+  background-image: url(../images/content/icon-download-btn.svg);
+  width: 56px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.file-uploader__uploads-list {
+  margin-left: 24px;
+
+}
+
+.file-uploader__uploads-item {
+  @include rhythm(18,18)
+  text-decoration: underline;
+  &:first-of-type {
+    margin-top: 20px;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+}
 
 
 @import "utils/_GUI";
