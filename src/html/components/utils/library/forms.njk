@@ -1,15 +1,18 @@
-{% import 'components/_forms.njk' as forms %}
 
 <div class="library">
   <div class="container">
     <div class="library__section">
       <div class="library__item">
 
+          {% import 'components/forms/search.njk' as forms %}
+
           {{ forms.search() }}
 
       </div>
 
       <div class="library__item">
+
+        {% import 'components/forms/subscribe.njk' as forms %}
 
         {{ forms.subscribe() }}
 
