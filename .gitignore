@@ -64,4 +64,4 @@ typings/
 .env
 dist
 .cache
-src/**/.DS_Store
+.DS_Store

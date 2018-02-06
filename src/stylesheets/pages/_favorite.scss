@@ -2,8 +2,6 @@
   //Core styles
 
   .favorite {
-
-
     .icon-cross {
       display: inline-block;
       top: 0px;
@@ -13,16 +11,6 @@
       }
     }
   }
-  .favorite__empty-icon {
-    margin-bottom: 40px;
-  }
-
-  .favorite__subHeading {
-    @include rhythm(24,26);
-    color: var(--gold);
-    @extend .f-weight-light;
-    margin-bottom: 15px;
-  }
 
   .footer {
     background-color: var(--gray1);
@@ -31,27 +19,38 @@
   //End core styles
 
   //Mods
-    .header--with-bg {
-      background-image: url(../images/general/favorite-bg--mobile.jpg);
-      @media (--m) {
-        background-image: url(../images/general/favorite-bg--desktop.jpg);
-      }
+  .header--with-bg {
+    background-image: url(../images/general/favorite-bg--mobile.jpg);
+    @media (--m) {
+      background-image: url(../images/general/favorite-bg--desktop.jpg);
     }
-
-    .favorite--empty-list {
-      text-align: center;
-    }
-  //End Mods
   }
+}
+
+.favorite__empty-icon {
+  margin-bottom: 40px;
+}
+
+.favorite__subHeading {
+  @include rhythm(24,26);
+  color: var(--gold);
+  @extend .f-weight-light;
+  margin-bottom: 15px;
+}
 
 
-  //Media queries
+.favorite--empty-list {
+  text-align: center;
+}
+//End Mods
 
-    //Core styles
+//Media queries
 
-    //End core styles
+//Core styles
 
-    //Mods
+//End core styles
 
-    //End mods
-  //End media queries
+//Mods
+
+//End mods
+//End media queries
