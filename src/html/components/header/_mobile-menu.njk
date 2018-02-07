@@ -11,16 +11,9 @@
       <a href="personalCabinetFavorites.html" class="nav__item link">Избранное</a>
     </nav>
 
-    <div class="form form--search">
-      <form>
-        <div class="form__field">
-          <label for="search">
-              <input type="search" name="search" id="search">
-              <i class="icon icon--loop">icon--loop</i>
-            </label>
-        </div>
-      </form>
-    </div>
+    {% import 'components/forms/search.njk' as forms %}
+
+    {{ forms.search('search-1') }}
 
     <div data-controller="lang-switcher" class="lang-switcher lang-switcher--center">
       <label class="lang-switcher__list-item">

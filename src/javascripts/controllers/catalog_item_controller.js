@@ -6,20 +6,39 @@ import { mSize } from "utils/constants.js";
 
 export default class CatalogItem extends Controller {
   initialize() {
-    const condition = window.matchMedia(mSize)
-      .matches;
-
     this.modal = initModal({
       onOpen: this.onModalOpen.bind(this),
       onBeforeClose: this.onModalBeforeClose.bind(this),
       clickOutside: false
     });
 
-    if (condition) {
-      this.initDesktop();
-    } else {
-      this.initMobile();
+    this.initedOnMobile = false;
+    this.initedOnDesktop = false;
+    this.slider = undefined;
+
+    const onEvents = () => {
+      const condition = window.matchMedia(mSize)
+      .matches;
+      if (!condition && !this.initedOnMobile) {
+        if (this.slider) {
+          this.slider.destroy(true);
+        }
+        this.slider = this.initMobile()
+        this.initedOnMobile = !this.initedOnMobile;
+      }
+
+      if (condition && !this.initedOnDesktop) {
+        if (this.slider) {
+          this.slider.destroy(true);
+        }
+        this.slider = this.initDesktop()
+        this.initedOnDesktop = !this.initedOnDesktop;
+      }
     }
+
+    ["load", "optimizedResize"].forEach(function(e) {
+      window.addEventListener(e, onEvents, false);
+    });
 
   }
   onModalOpen() {
@@ -80,7 +99,7 @@ export default class CatalogItem extends Controller {
     });
   }
   initMobile() {
-    this.getSiema({
+    return this.getSiema({
       selector: this.targets.find("slider"),
       draggable: true,
       onInit: function() {
@@ -94,7 +113,7 @@ export default class CatalogItem extends Controller {
     });
   }
   initDesktop() {
-    this.getSiema({
+    return this.getSiema({
       selector: this.targets.find("slider"),
       onInit: function() {
         this.addDots();

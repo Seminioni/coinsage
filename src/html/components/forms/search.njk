@@ -1,9 +1,9 @@
-{% macro search() %}
+{% macro search(id) %}
 <div class="form form--search">
   <form>
     <div class="form__field">
       <label for="search">
-        <input type="search" name="search" id="search">
+        <input type="search" id="{{id}}">
         <i class="icon icon--loop">icon--loop</i>
       </label>
     </div>

@@ -34,15 +34,8 @@
         </label>
   </div>
 
-  <div class="form form--search">
-    <form>
-      <div class="form__field">
-        <label for="search">
-            <input type="search" name="search" id="search">
-            <i class="icon icon--loop">icon--loop</i>
-          </label>
-      </div>
-    </form>
-  </div>
+  {% import 'components/forms/search.njk' as forms %}
+
+  {{ forms.search('search-2') }}
 
 </div>

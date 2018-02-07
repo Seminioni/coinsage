@@ -55,11 +55,13 @@
     }
 
     .icon-expand {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
       @media (--m) {
         z-index: 10;
         right: -23px;
-        display: inline-block;
+        visibility: visible;
+        opacity: 1;
       }
     }
 
