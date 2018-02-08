@@ -72,11 +72,7 @@
     </div>
     <div class="catalog-item__quantity">
       <span class="catalog-item__quantity-prop">Кол-во:</span>
-      <div data-controller="stepper" class="catalog-item__quantity-value stepper">
-        <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--left"></span>
-        <input data-target="stepper.stepperInput" type="text" class="stepper__side stepper__side--middle" value="0" readonly>
-        <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--right"></span>
-      </div>
+      {% include 'components/_stepper.njk' %}
     </div>
     <button class="btn-black">в избранное</button>
     <button class="btn-gold">в корзину</button>

@@ -1,18 +1,20 @@
-import { Controller } from "stimulus"
+import { Controller } from "stimulus";
 
 export default class Stepper extends Controller {
+  initialize() {
+    this.input = this.targets.find("stepperInput");
+  }
   onSideClick(e) {
-    const input = this.targets.find('stepperInput');
-    let inputVal = +input.value;
+    let inputVal = +this.input.value;
 
-    if (e.currentTarget.classList.contains('stepper__side--right')) {
+    if (e.currentTarget.classList.contains("stepper__side--right")) {
       inputVal += 1;
     } else {
       if (inputVal === 0) {
-        return
+        return;
       }
       inputVal -= 1;
     }
-    input.value = inputVal;
+    this.input.value = inputVal;
   }
 }

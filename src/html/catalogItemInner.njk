@@ -74,11 +74,7 @@
                 <div class="catalog-info__desc-item catalog-info__desc-item--stepper">
                   <p class="catalog-info__prop">Кол-во:</p>
                   <div class="catalog-info__value">
-                    <div data-controller="stepper" class="catalog-item__quantity-value stepper">
-                      <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--left"></span>
-                      <input data-target="stepper.stepperInput" type="text" class="stepper__side stepper__side--middle" value="0" readonly="">
-                      <span data-action="click->stepper#onSideClick" class="stepper__side stepper__side--right"></span>
-                    </div>
+                    {% include 'components/_stepper.njk' %}
                   </div>
                 </div>
               </div>
