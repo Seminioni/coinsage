@@ -32,15 +32,14 @@
   <main class="main">
 
     <section class="section-wrapper section-wrapper--pdt-no-on-desktop">
-      <div class="tabs">
-
+      <div data-controller="tabs" class="tabs">
+          <p data-target="tabs.heading" data-action="click->tabs#onMobileTabHeadingClick" class="tabs__mobile-heading">Корзина</p>
           <div class="container">
-            <p class="tabs__mobile-heading">Мои заказы</p>
-            <ul class="tabs__inner">
-              <li class="tabs__item"><a href="personalCabinetMyOrders.html" class="link tabs__link">Мои заказы</a></li>
-              <li class="tabs__item"><a href="personalCabinetFavorites.html" class="link tabs__link">Избранное</a></li>
-              <li class="tabs__item"><a href="personalCabinetBasket.html" class="link tabs__link tabs__link--active">Корзина</a></li>
-              <li class="tabs__item"><a href="personalCabinetPreferences.html" class="link tabs__link">Настройки</a></li>
+            <ul data-target="tabs.inner" class="tabs__inner">
+              <li class="tabs__item"><a href="personalCabinetMyOrders.html" data-action="tabs#onTabsLinkClick" class="link tabs__link ">Мои заказы</a></li>
+              <li class="tabs__item"><a href="personalCabinetFavorites.html" data-action="tabs#onTabsLinkClick" class="link tabs__link">Избранное</a></li>
+              <li class="tabs__item"><a href="personalCabinetBasket.html" data-action="tabs#onTabsLinkClick" class="link tabs__link tabs__link--active">Корзина</a></li>
+              <li class="tabs__item"><a href="personalCabinetPreferences.html" data-action="tabs#onTabsLinkClick" class="link tabs__link">Настройки</a></li>
             </ul>
 
           </div>
