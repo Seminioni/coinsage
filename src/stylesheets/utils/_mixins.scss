@@ -57,7 +57,6 @@
 @mixin goldOnHover($icon) {
   @include setTransitionFor(color, fill);
 
-
   &:hover {
     @if $icon == icon {
       fill: var(--gold);

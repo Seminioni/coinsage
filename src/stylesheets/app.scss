@@ -210,47 +210,6 @@ body {
   border-bottom: 1px solid var(--gold);
 }
 
-.file-uploader {
-  display: inline-flex;
-  input[type="file"] {
-    display: none;
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-.file-uploader__icon {
-  background-image: url(../images/content/icon-download-btn.svg);
-  width: 56px;
-  height: 56px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-}
-
-.file-uploader__uploads-list {
-  margin-left: 24px;
-
-}
-
-.file-uploader__uploads-item {
-  @include rhythm(18,18)
-  text-decoration: underline;
-  &:first-of-type {
-    margin-top: 20px;
-  }
-  &:not(:last-of-type) {
-    margin-bottom: 5px;
-  }
-}
-
 
 @import "utils/_GUI";
 @import "utils/form/_index";
@@ -276,6 +235,7 @@ body {
 @import "components/_pagination";
 @import "components/_in-row";
 @import "components/_basket";
+@import "components/_file-uploader";
 
 @import "pages/_main";
 @import "pages/_lib";
