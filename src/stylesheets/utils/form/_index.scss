@@ -13,12 +13,11 @@
   max-width: 750px;
   margin: auto;
 
-  input[type='text'],
-  input[type='email'],
-  input[type='password'],
-  input[type='number']
-  input[type='tel'],
-  input[type='search'] {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] input[type="tel"],
+  input[type="search"] {
     background-color: var(--white);
     width: 100%;
     border-radius: 0;
@@ -35,7 +34,6 @@
       border-color: var(--red);
     }
   }
-
 
   .input__image {
     background-image: url(../images/content/icon-download-btn.svg);
@@ -71,7 +69,6 @@
         margin-left: 30px;
       }
     }
-
   }
 
   .radiobtns--vertical {
@@ -84,8 +81,6 @@
       }
     }
   }
-
-
 }
 
 .form__field {
@@ -99,7 +94,6 @@
     margin-top: 35px;
   }
 }
-
 
 .form__field-heading {
   display: inline-block;
@@ -139,12 +133,11 @@
 //Mods
 .form--search,
 .form--subscribtion {
-  input[type='text'],
-  input[type='email'],
-  input[type='password'],
-  input[type='number']
-  input[type='tel'],
-  input[type='search'] {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] input[type="tel"],
+  input[type="search"] {
     background-color: transparent;
     width: 100%;
     border: 0;
@@ -155,7 +148,6 @@
     @include rhythm(13,13);
     font-weight: 300;
     padding: 5px 5px 5px 0;
-
   }
 }
 
@@ -175,11 +167,11 @@
     width: 100%;
   }
 
-  input[type='search']:focus {
+  input[type="search"]:focus {
     border-color: var(--gold);
   }
 
-  input[type='search']:focus ~ .icon {
+  input[type="search"]:focus ~ .icon {
     background-image: url(../images/content/icon-loop--gold.svg);
   }
 }
@@ -259,7 +251,6 @@
       padding: 0;
     }
   }
-
 }
 
 .form__field--centered {
@@ -280,8 +271,6 @@
     max-width: 75%;
   }
 }
-
-
 
 .form--send-coins {
   max-width: unset;
@@ -347,7 +336,6 @@
         }
       }
     }
-
   }
   .select {
     .choices__inner {
@@ -376,7 +364,7 @@
 
         &:focus {
           border: 0;
-          border-bottom: 1px solid rgba(0, 0, 0, .12);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         }
       }
       .choices__heading {
@@ -386,18 +374,16 @@
       }
     }
   }
-
 }
-
 
 //End mods
 
 //Media queries
-  //Core styles
+//Core styles
 
-  //End core styles
+//End core styles
 
-  //Mods
+//Mods
 
-  //End mods
+//End mods
 //End media queries
