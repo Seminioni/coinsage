@@ -16,6 +16,16 @@
   &:nth-child(even) {
     border-left: 1px solid var(--gray6);
   }
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    width: calc(100% / 3);
+    &:nth-child(even) {
+      border: 0
+    }
+    &:nth-child(3n + 2) {
+      border-left: 1px solid var(--gray6);
+      border-right: 1px solid var(--gray6);
+    }
+  }
   @media (--xl-sm) {
     .catalog-item {
       padding-left: 15px;
