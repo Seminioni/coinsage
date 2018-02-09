@@ -1,6 +1,6 @@
 import { Controller } from "stimulus";
 import initSiema from "components/slider/index.js";
-import { mSize } from "utils/constants.js";
+import { M_SIZE } from "utils/constants.js";
 
 (function() {
   var throttle = function(type, name, obj) {
@@ -27,7 +27,7 @@ export default class CatalogItem extends Controller {
     this.inited = false;
 
     const onEvents = () => {
-      const condition = window.matchMedia(mSize)
+      const condition = window.matchMedia(M_SIZE)
       .matches;
 
       if (!condition && !this.inited) {

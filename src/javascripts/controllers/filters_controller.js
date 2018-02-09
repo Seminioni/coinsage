@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 import { toggleClass, doScrolling, isElementInViewport } from "../utils";
 import Dropdown from "../components/dropdown/index.js";
-import { sSize } from "utils/constants.js";
+import { S_SIZE } from "utils/constants.js";
 
 function findAncestor(el, cls) {
   while ((el = el.parentElement) && !el.classList.contains(cls));
@@ -37,7 +37,7 @@ export default class Filters extends Controller {
 
   onOpenButtonClick(e) {
     e.preventDefault();
-    if (window.matchMedia(sSize).matches) {
+    if (window.matchMedia(S_SIZE).matches) {
       const header = findAncestor(this.element, "header");
       toggleClass(header, "filters--is-open");
     }

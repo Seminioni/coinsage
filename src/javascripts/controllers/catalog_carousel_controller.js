@@ -1,13 +1,13 @@
 import { Controller } from "stimulus";
 import initSiema from "components/slider/index.js";
-import { sSize } from "utils/constants.js";
+import { S_SIZE } from "utils/constants.js";
 
 export default class CatalogCarousel extends Controller {
   initialize() {
     this.inited = false;
 
     const onEvents = () => {
-      const condition = window.matchMedia(sSize)
+      const condition = window.matchMedia(S_SIZE)
       .matches;
 
       if (!condition && !this.inited) {

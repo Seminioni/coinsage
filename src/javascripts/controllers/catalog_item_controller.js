@@ -2,7 +2,7 @@ import { Controller } from "stimulus";
 import initSiema from "components/slider/index.js";
 import Drift from "drift-zoom";
 import initModal from "components/modal/index.js";
-import { mSize } from "utils/constants.js";
+import { M_SIZE } from "utils/constants.js";
 
 export default class CatalogItem extends Controller {
   initialize() {
@@ -17,7 +17,7 @@ export default class CatalogItem extends Controller {
     this.slider = undefined;
 
     const onEvents = () => {
-      const condition = window.matchMedia(mSize)
+      const condition = window.matchMedia(M_SIZE)
       .matches;
       if (!condition && !this.initedOnMobile) {
         if (this.slider) {

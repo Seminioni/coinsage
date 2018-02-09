@@ -9,8 +9,12 @@
   }
 
   .header__container {
-    a {
+    .link {
       text-decoration: none;
+    }
+
+    .link-exit {
+      margin-top: 40px;
     }
   }
 
