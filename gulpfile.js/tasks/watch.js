@@ -3,7 +3,7 @@ var path   = require('path')
 var watch  = require('gulp-watch')
 
 var watchTask = function() {
-  var watchableTasks = ['fonts', 'iconFont', 'images', 'svgSprite', 'html', 'stylesheets', 'static']
+  var watchableTasks = ['fonts', 'iconFont', 'images', 'svgSprite', 'html', 'stylesheets', 'static', 'pngSprite']
 
   function getTaskPathFor(taskName) {
     switch (taskName) {
@@ -11,6 +11,8 @@ var watchTask = function() {
         return PATH_CONFIG.icons
       case 'svgSprite':
         return PATH_CONFIG.icons
+      case 'pngSprite':
+        return PATH_CONFIG.pngSprite
       case 'html':
         return PATH_CONFIG.html
       case 'static':

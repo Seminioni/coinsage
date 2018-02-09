@@ -1,6 +1,7 @@
 // App styles, imports etc...
 
 @import-normalize;
+@import "utils/sprite/_sprite";
 @import "utils/_resets";
 @import "choices";
 @import "utils/_vars";
@@ -8,6 +9,7 @@
 @import "utils/_library";
 @import "utils/_radiobuttons";
 @import "utils/_buttons";
+
 
 html,
 body {
@@ -120,11 +122,7 @@ body {
 }
 
 .icon--loop {
-  background-image: url(../images/content/icon-loop.svg);
-  width: 10px;
-  height: 15px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include retina-sprite($icon-loop-group);
 }
 
 .logo {

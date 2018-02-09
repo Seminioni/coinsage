@@ -35,5 +35,10 @@
   "icons": {
     "src": "icons",
     "dest": "images"
+  },
+
+  "pngSprite": {
+    "src": "sprites",
+    "dest": "images"
   }
 }

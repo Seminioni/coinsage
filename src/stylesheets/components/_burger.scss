@@ -3,9 +3,7 @@
   width: 54px;
   height: 45px;
   @include setTransitionFor(transform);
-  background-image: url(../images/content/icon-burger.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  @include retina-sprite($icon-burger-group);
   &.active {
     transform: rotate(90deg);
   }

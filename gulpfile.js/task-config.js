@@ -33,5 +33,9 @@ module.exports = {
 
   production: {
     rev: false
+  },
+
+  sprites: {
+
   }
 }

@@ -73,6 +73,8 @@ module.exports = {
     svgstore: {}
   },
 
+  pngSprite: {},
+
   production: {
     rev: true
   },

@@ -21,11 +21,7 @@
     position: absolute;
     top: -9px;
     left: 50%;
-    width: 19px;
-    height: 10px;
-    background-image: url("../images/content/icon-top-arrow.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include retina-sprite($icon-top-arrow-group);
     transform: translateX(-50%);
   }
   @media (--m) {

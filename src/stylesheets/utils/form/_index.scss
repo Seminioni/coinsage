@@ -172,7 +172,7 @@
   }
 
   input[type="search"]:focus ~ .icon {
-    background-image: url(../images/content/icon-loop--gold.svg);
+    @include retina-sprite($icon-loop-gold-group);
   }
 }
 
