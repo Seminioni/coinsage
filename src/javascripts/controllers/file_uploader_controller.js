@@ -16,7 +16,7 @@ export default class FileUploader extends Controller {
     );
   }
 
-  renderFileNames(names, kek) {
+  renderFileNames(names) {
     const uploadsList = this.targets.find("uploads-list");
 
     uploadsList.innerHTML = "";

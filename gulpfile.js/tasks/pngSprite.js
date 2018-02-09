@@ -21,8 +21,6 @@ const pngSpriteTask = function() {
     )
   };
 
-  console.log(settings.src)
-
   const spriteData =
     gulp.src(path.resolve(settings.src, '*.png'))
     .pipe(plumber(errorHandler))
