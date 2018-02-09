@@ -12,21 +12,22 @@ const pngSpriteTask = function() {
     src: path.resolve(
       process.env.PWD,
       PATH_CONFIG.src,
-      PATH_CONFIG.pngSprite.src,
-      '*.png'
+      PATH_CONFIG.icons.png.src
     ),
     dest: path.resolve(
       process.env.PWD,
       PATH_CONFIG.dest,
-      PATH_CONFIG.pngSprite.dest
+      PATH_CONFIG.icons.png.dest
     )
   };
 
+  console.log(settings.src)
+
   const spriteData =
-    gulp.src(settings.src)
+    gulp.src(path.resolve(settings.src, '*.png'))
     .pipe(plumber(errorHandler))
     .pipe(spritesmith({
-    retinaSrcFilter: './src/sprites/*@2x.png',
+    retinaSrcFilter: path.resolve(settings.src, '*@2x.png'),
     imgName: 'sprite.png',
     retinaImgName: 'sprite@2x.png',
     cssName: '_sprite.scss'

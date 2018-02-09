@@ -1,13 +1,13 @@
 {% macro sprite(id, viewBox, classes) %}
   {% set viewBox = viewBox or "0 0 1 1"%}
   <span class='sprite {{id}} {{classes}}'>
-    <svg viewBox="{{viewBox}}"><use xlink:href='images/icons.svg#{{id}}'></use></svg>
+    <svg viewBox="{{viewBox}}"><use xlink:href='images/svgSprite.svg#{{id}}'></use></svg>
   </span>
 {% endmacro %}
 
 {% macro spriteForLink(id, viewBox, classes) %}
   {% set viewBox = viewBox or "0 0 1 1"%}
   <a href="#" class='link-as-icon sprite {{id}} {{classes}}'>
-    <svg viewBox="{{viewBox}}"><use xlink:href='images/icons.svg#{{id}}'></use></svg>
+    <svg viewBox="{{viewBox}}"><use xlink:href='images/svgSprite.svg#{{id}}'></use></svg>
   </a>
 {% endmacro %}

@@ -33,12 +33,13 @@
   },
 
   "icons": {
-    "src": "icons",
-    "dest": "images"
-  },
-
-  "pngSprite": {
-    "src": "sprites",
-    "dest": "images"
+    "png": {
+      "src": "icons/png",
+      "dest": "images"
+    },
+    "svg": {
+      "src": "icons/svg",
+      "dest": "images"
+    }
   }
 }

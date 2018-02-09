@@ -35,7 +35,4 @@ module.exports = {
     rev: false
   },
 
-  sprites: {
-
-  }
 }
