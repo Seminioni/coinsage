@@ -64,10 +64,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/personal-cabinet-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/personal-cabinet-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/personal-cabinet-bg--mobile.jpg',
+      '../images/general/personal-cabinet-bg--desktop.jpg'
+    )
   }
 
   //End Mods

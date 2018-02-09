@@ -56,6 +56,7 @@
     @media (--m) {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
       max-width: 450px;
       margin: auto;
     }
@@ -107,10 +108,10 @@
 
 //Mods
   .header--with-bg {
-    background-image: url(../images/general/aboutus-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/aboutus-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/aboutus-bg--mobile.jpg',
+      '../images/general/aboutus-bg--desktop.jpg'
+    )
   }
 
 

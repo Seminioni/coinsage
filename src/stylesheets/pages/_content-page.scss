@@ -2,7 +2,8 @@
   //Core styles
 
   .main {
-    @include rhythm(14,16) @extend .f-weight-light;
+    @include rhythm(14,16);
+    @extend .f-weight-light;
 
     p {
       text-align: left;
@@ -59,14 +60,6 @@
   //End Mods
 
   //Media queries
-
-  //Core styles
-
-  //End core styles
-
-  //Mods
-
-  //End mods
 
   //End media queries
 }

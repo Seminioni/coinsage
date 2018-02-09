@@ -39,10 +39,10 @@
 
 //Mods
   .header--with-bg {
-    background-image: url(../images/general/contacts-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/contacts-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/contacts-bg--mobile.jpg',
+      '../images/general/contacts-bg--desktop.jpg'
+    )
   }
 
 

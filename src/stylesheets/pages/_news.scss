@@ -147,10 +147,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/news-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/news-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/news-bg--mobile.jpg',
+      '../images/general/news-bg--desktop.jpg'
+    )
   }
 
   //End Mods

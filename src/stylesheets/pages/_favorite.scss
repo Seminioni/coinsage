@@ -27,10 +27,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/favorite-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/favorite-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/favorite-bg--mobile.jpg',
+      '../images/general/favorite-bg--desktop.jpg'
+    )
   }
 }
 

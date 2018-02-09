@@ -30,10 +30,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/catalog-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/catalog-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/catalog-bg--mobile.jpg',
+      '../images/general/catalog-bg--desktop.jpg'
+    )
   }
   //Mods
 

@@ -8,10 +8,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/delivery-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/delivery-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/delivery-bg--mobile.jpg',
+      '../images/general/delivery-bg--desktop.jpg'
+    )
   }
 
   //End Mods

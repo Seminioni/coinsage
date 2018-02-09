@@ -97,4 +97,12 @@
   }
 }
 
+@mixin setHeaderBackgrounds($mobilePath, $desktopPath) {
+  @custom-media --headerBreakpoint (width >= 400px);
+
+  background-image: url($mobilePath);
+  @media (--headerBreakpoint) {
+    background-image: url($desktopPath);
+  }
+}
 

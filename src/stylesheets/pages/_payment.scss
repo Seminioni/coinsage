@@ -19,10 +19,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/payment-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/payment-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/payment-bg--mobile.jpg',
+      '../images/general/payment-bg--desktop.jpg'
+    )
   }
 
   //End Mods

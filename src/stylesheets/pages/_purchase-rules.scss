@@ -33,10 +33,10 @@
 
   //Mods
   .header--with-bg {
-    background-image: url(../images/general/purchase-rules-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/purchase-rules-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/purchase-rules-bg--mobile.jpg',
+      '../images/general/purchase-rules-bg--desktop.jpg'
+    )
   }
 
   //End Mods

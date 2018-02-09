@@ -37,10 +37,10 @@
 
 //Mods
   .header--with-bg {
-    background-image: url(../images/general/main-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/main-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/main-bg--mobile.jpg',
+      '../images/general/main-bg--desktop.jpg'
+    )
   }
 //End mods
 

@@ -15,10 +15,10 @@
 
 //Mods
   .header--with-bg {
-    background-image: url(../images/general/basket-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/basket-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/basket-bg--mobile.jpg',
+      '../images/general/basket-bg--desktop.jpg'
+    )
   }
 
 

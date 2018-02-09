@@ -20,10 +20,10 @@
 
 //Mods
   .header--with-bg {
-    background-image: url(../images/general/purchase-bg--mobile.jpg);
-    @media (--m) {
-      background-image: url(../images/general/purchase-bg--desktop.jpg);
-    }
+    @include setHeaderBackgrounds(
+      '../images/general/purchase-bg--mobile.jpg',
+      '../images/general/purchase-bg--desktop.jpg'
+    )
   }
 
 
