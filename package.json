@@ -14,7 +14,6 @@
   "dependencies": {
     "Tabby": "cferdinandi/tabby",
     "choices.js": "^3.0.3",
-    "cookie_js": "^1.2.2",
     "drift-zoom": "^1.2.0",
     "siema": "^1.4.12",
     "stimulus": "^0.9.0",
