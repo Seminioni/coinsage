@@ -34,8 +34,6 @@
     z-index: 10;
     @media (--m) {
       right: 0;
-      top: unset;
-      bottom: 0;
     }
   }
 
@@ -116,7 +114,7 @@
     display: inline-flex;
     flex-basis: unset;
     max-width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     &:not(:last-of-type) {
       margin-right: 20px;
     }
