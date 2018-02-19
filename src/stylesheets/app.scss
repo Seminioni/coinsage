@@ -121,9 +121,7 @@ body {
   display: inline-block;
 }
 
-.icon--loop {
-  @include retina-sprite($icon-loop-group);
-}
+
 
 .logo {
   text-decoration: none;

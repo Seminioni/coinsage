@@ -77,9 +77,11 @@ img {
   &-diamond {
     width: 15px;
   }
-
-  &-expand {
-    width: 22px;
+  &-loop {
+    @include retina-sprite($icon-loop-group);
+    background-color: transparent;
+    border: 0;
+    margin-left: 5px;
   }
 }
 
