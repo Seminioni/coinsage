@@ -81,12 +81,15 @@
   .link-as-icon {
     position: absolute;
     top: 0;
-    right: 12px;
     svg {
       fill: var(--gold);
     }
   }
+  .icon-favorite {
+    right: 8px;
+  }
   .icon-basket {
+    right: 10px;
     top: 35px;
   }
 }
