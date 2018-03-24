@@ -1,23 +1,28 @@
 import { Controller } from "stimulus";
 
 export default class Stepper extends Controller {
-  initialize() {
-    this.input = this.targets.find("stepperInput");
-  }
-  onSideClick(e) {
-    let inputVal = +this.input.value;
+  static targets = ["input"]
 
-    if (e.currentTarget.classList.contains("stepper__side--right")) {
-      inputVal += 1;
-    } else {
-      if (inputVal === 0) {
-        return;
-      }
-      inputVal -= 1;
-    }
-    this.input.value = inputVal;
+  up() {
+    this.input.instance.value = this.input.value + 1;
   }
+
+  down() {
+    if (this.input.value === 0) {
+      return;
+    } else {
+      this.input.instance.value = this.input.value - 1;
+    }
+  }
+
   validateInput(e) {
     e.target.value = e.target.value.replace(/[^\d]/, '');
+  }
+
+  get input() {
+    return {
+      instance: this.inputTarget,
+      value: +this.inputTarget.value
+    }
   }
 }
