@@ -26,8 +26,8 @@ const pngSpriteTask = function() {
     .pipe(plumber(errorHandler))
     .pipe(spritesmith({
     retinaSrcFilter: path.resolve(settings.src, '*@2x.png'),
-    imgName: 'sprite.png',
-    retinaImgName: 'sprite@2x.png',
+    imgName: '../images/sprite.png',
+    retinaImgName: '../images/sprite@2x.png',
     cssName: '_sprite.scss'
   }));
 

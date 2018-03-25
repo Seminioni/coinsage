@@ -25,12 +25,15 @@ export default class CatalogCarousel extends Controller {
       window.addEventListener(e, onEvents, false);
     });
 
+    this.element.classList.remove('is-initing');
   }
   onMobile() {
+    const slider = this.element.querySelector(
+      ".catalog__inner"
+    );
+
     return initSiema({
-      selector: this.element.querySelector(
-        ".catalog__inner"
-      ),
+      selector: slider,
       duration: 500,
       easing: "ease-in-out",
       perPage: {
@@ -43,7 +46,7 @@ export default class CatalogCarousel extends Controller {
       threshold: 20,
       loop: true,
       onInit: function() {
-        this.addArrows()
+        this.addArrows();
       },
       onChange: function() {}
     });

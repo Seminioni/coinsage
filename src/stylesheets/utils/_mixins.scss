@@ -34,6 +34,12 @@
   transition-property: $properties;
 }
 
+@mixin setTransitionFor2($time: 0.2s, $properties...) {
+  transition-timing-function: ease-in-out;
+  transition-duration: $time;
+  transition-property: $properties;
+}
+
 @mixin arrowSmall($side) {
   position: relative;
   display: inline-block;
@@ -103,5 +109,18 @@
   background-image: url($mobilePath);
   @media (--headerBreakpoint) {
     background-image: url($desktopPath);
+  }
+}
+
+@mixin fixSlider() {
+  @include setTransitionFor2(0.6s, opacity, visibility, overflow);
+
+  &.is-initing {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    > * {
+      height: 0;
+    }
   }
 }

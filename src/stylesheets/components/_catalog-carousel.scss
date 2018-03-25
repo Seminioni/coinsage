@@ -1,8 +1,11 @@
 //Core styles
 .catalog-carousel {
-
   .arrow {
     display: none;
+  }
+
+  .catalog {
+    @include fixSlider();
   }
 
   @media (--m) {
@@ -22,7 +25,6 @@
     .catalog-item-wr {
       width: 100%;
     }
-
   }
 
   @media (--xl) {
@@ -42,9 +44,7 @@
     .icon-basket {
       display: none;
     }
-
   }
-
 }
 //End core styles
 
@@ -53,11 +53,11 @@
 //End mods
 
 //Media queries
-  //Core styles
+//Core styles
 
-  //End core styles
+//End core styles
 
-  //Mods
+//Mods
 
-  //End mods
+//End mods
 //End media queries

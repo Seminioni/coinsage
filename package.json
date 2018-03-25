@@ -2,14 +2,14 @@
   "name": "Coins",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:TeachMePleaseCorp/coinsage.ru.git",
-  "author": "Seminioni <lebatmann@gmail.com>",
+  "repository": "git@bitbucket.org:seminioni/coinsage.ru.git",
+  "author": "Seminioni <seminioni@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
     "gh-pages": "gulp gh-pages",
-    "deploy": "yarn build && surge -p ./public -d coinsage.surge.sh"
+    "deploy": "yarn build && surge -p ./public -d coins-age.surge.sh"
   },
   "dependencies": {
     "Tabby": "cferdinandi/tabby",

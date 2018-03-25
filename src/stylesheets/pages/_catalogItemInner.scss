@@ -1,6 +1,5 @@
 //Core styles
 .page__wrapper.page__wrapper--catalog-item-page {
-
   .header {
     min-height: auto;
     padding-top: 0;
@@ -20,7 +19,6 @@
   }
 
   .catalog-item-wrapper {
-
     .catalog-item {
       padding-left: 0;
       padding-right: 0;
@@ -32,13 +30,14 @@
       margin-bottom: 25px;
       display: inline-block;
       @media (--m) {
-
         display: block;
         margin-bottom: 0;
       }
     }
 
-
+    .catalog-item__slider {
+      @include fixSlider();
+    }
 
     .arrow {
       @media (--m) {
@@ -69,16 +68,16 @@
       display: block;
       margin-bottom: 20px;
       @media (--m) {
-        @include rhythm(18,18);
+        @include rhythm(18, 18);
       }
     }
     .catalog-item__heading {
       color: var(--gold);
-      @include rhythm(20,20);
+      @include rhythm(20, 20);
       @extend .f-weight-light;
       margin-bottom: 15px;
       @media (--m) {
-        @include rhythm(36,36);
+        @include rhythm(36, 36);
         letter-spacing: 3.27px;
         margin-bottom: 20px;
       }
@@ -86,7 +85,7 @@
     .catalog-item__price {
       color: var(--gold);
       margin-bottom: 20px;
-      @include rhythm(24,24);
+      @include rhythm(24, 24);
       @extend .f-weight-normal;
       @media (--m) {
         margin-bottom: 60px;
@@ -107,7 +106,6 @@
         transform: translateX(50px);
       }
     }
-
 
     .catalog-item__preview {
       display: none;
@@ -169,7 +167,6 @@
       }
     }
 
-
     .catalog-info__desc-item {
       text-align: left;
       @media (--m) {
@@ -195,7 +192,6 @@
         margin-bottom: 0;
       }
     }
-
 
     .catalog-info__prop {
       @extend .f-weight-light;
@@ -245,7 +241,6 @@
         }
       }
     }
-
   }
 
   .in-row {
@@ -258,40 +253,40 @@
 
   .similar-coins {
     .section-title {
-      @include rhythm(24,24);
+      @include rhythm(24, 24);
     }
   }
 
   .footer {
     background-color: var(--gray1);
   }
-//End core styles
+  //End core styles
 
-//Mods
-.catalog-info__desc-item--stepper {
-  margin-top: 20px;
-  align-items: center;
-  @media (--m) {
-    margin-top: 45px;
-
+  //Mods
+  .catalog-info__desc-item--stepper {
+    margin-top: 20px;
     align-items: center;
-    .catalog-info__value {
-      margin-left: 30px;
+    @media (--m) {
+      margin-top: 45px;
+
+      align-items: center;
+      .catalog-info__value {
+        margin-left: 30px;
+      }
+    }
+    p {
+      @include rhythm(18, 18);
     }
   }
-  p {
-    @include rhythm(18,18);
-  }
-}
 
-.catalog-item-wrapper {
-  .catalog-item__preview-item--active {
-    filter: opacity(1);
+  .catalog-item-wrapper {
+    .catalog-item__preview-item--active {
+      filter: opacity(1);
+    }
   }
-}
-//End mods
+  //End mods
 
-//Media queries
+  //Media queries
   //Core styles
 
   //End core styles
@@ -299,5 +294,5 @@
   //Mods
 
   //End mods
-//End media queries
+  //End media queries
 }

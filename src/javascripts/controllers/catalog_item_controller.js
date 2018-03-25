@@ -5,6 +5,8 @@ import initModal from "components/modal/index.js";
 import { M_SIZE } from "utils/constants.js";
 
 export default class CatalogItem extends Controller {
+  static targets = ['slider'];
+
   initialize() {
     this.modal = initModal({
       onOpen: this.onModalOpen.bind(this),
@@ -99,6 +101,8 @@ export default class CatalogItem extends Controller {
     });
   }
   initMobile() {
+    const _this = this;
+
     return this.getSiema({
       selector: this.targets.find("slider"),
       draggable: true,
@@ -106,6 +110,7 @@ export default class CatalogItem extends Controller {
         this.addDots();
         this.updateDots();
         this.addArrows();
+        _this.onInitFinish();
       },
       onChange: function() {
         this.updateDots();
@@ -113,6 +118,8 @@ export default class CatalogItem extends Controller {
     });
   }
   initDesktop() {
+    const _this = this;
+
     return this.getSiema({
       selector: this.targets.find("slider"),
       onInit: function() {
@@ -120,6 +127,7 @@ export default class CatalogItem extends Controller {
         this.updateDots();
         this.addPreviews(document.querySelector(".catalog-item__preview"));
         this.updatePreviews(document.querySelector(".catalog-item__preview"));
+        _this.onInitFinish();
       },
       onChange: function() {
         this.updateDots();
@@ -138,12 +146,16 @@ export default class CatalogItem extends Controller {
         draggable: false,
         multipleDrag: false,
         threshold: 20,
-        loop: true
+        loop: true,
       },
       options
     );
 
     return initSiema(settings);
+  }
+
+  onInitFinish() {
+    this.sliderTarget.classList.remove('is-initing');
   }
 
   openModal(e) {
