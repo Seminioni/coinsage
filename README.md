@@ -1,9 +1,9 @@
 # Coinsage.ru frontend repository
 
-### Постоянная ссылка на рабочу версию
+### Постоянная ссылка на рабочую версию
 
 ```
-http://coinsage.surge.sh/
+http://coins-age.surge.sh/
 ```
 
 ### Подготовка
