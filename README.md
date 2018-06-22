@@ -3,7 +3,7 @@
 ### Посмотреть
 
 ```
-http://coinsage.netlify.com/
+https://coinsage.netlify.com/
 ```
 
 ### Подготовка
