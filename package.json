@@ -1,5 +1,5 @@
 {
-  "name": "Coins",
+  "name": "coinsage",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@bitbucket.org:seminioni/coinsage.ru.git",
@@ -9,7 +9,7 @@
     "start": "gulp",
     "build": "gulp build",
     "gh-pages": "gulp gh-pages",
-    "deploy": "yarn build && surge -p ./public -d coins-age.surge.sh"
+    "deploy": "yarn build && netlify deploy"
   },
   "dependencies": {
     "Tabby": "cferdinandi/tabby",
